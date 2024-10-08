@@ -49,14 +49,13 @@
     display: flex;
     flex-direction: row;
     position: relative;
-
     align-items: center;
 }
 .history {
     margin-right: 20px;
     font-size: 13px;
     border-radius: 20px;
-    width: 140px;
+    
     height: 25px;
     border-width: 1px;
     border-color: rgb(237, 234, 230);
@@ -76,7 +75,7 @@
     margin-right: 20px;
     font-size: 13px;
     border-radius: 20px;
-    width: 140px;
+    /* width: 140px; */
     height: 25px;
     border-width: 1px;
     border-color: rgb(237, 234, 230);
