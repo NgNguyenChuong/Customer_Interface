@@ -1,33 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+    <meta charset="utf-8" />
     <title>Home page</title>
     <link rel="stylesheet" href="../style/header.css">
     <link rel="stylesheet" href="../icon/css/all.css">
     <link rel="stylesheet" href="../style/generall.css">
-
-
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap" rel="stylesheet">
 </head>
+
+    
 <body style="height: 10000px;">
     <div class="container-header">
         <div class="header">
             <div class="left-section">
-                <p style="
-                    font-weight: 500;
-                    font-size: 18px;  
-                    cursor: pointer; 
-                ">SẢN PHẨM > </p>
-                <p style="margin-left: 50px;
-                    font-weight: 500;
-                    font-size: 18px;
-                    cursor: pointer;
-                ">CỬA HÀNG</p>
+                <a href="#" class="dropdown-toggle">KHUYẾN MÃI </a>
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">
+                        SẢN PHẨM 
+                        <i class="fa-solid fa-chevron-right"></i> 
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="#">Rau củ quả</a>
+                        <a href="#">Trái cây</a>
+                        <div class="dropdown-menu1">
+                            <a href="#">Thịt & Thủy hải sản <i class="fa-solid fa-chevron-right"></i></a>
+                            <div class="dropdown-menu2">
+                                <a href="#">Thịt heo</a>
+                                <a href="#">Thịt bò</a>
+                                <a href="#">Gia cầm & Trứng</a>
+                                <a href="#">Thủy hải sản</a>
+                            </div>
+                        </div>
+                        <div class="dropdown-menu3">
+                            <a href="#">Thức uống <i class="fa-solid fa-chevron-right"></i></a>
+                            <div class="dropdown-menu4">
+                                <a href="#">Trà và Cà phê</a>
+                                <a href="#">Sữa</a>
+                                <a href="#">Nước ép & Sinh tố</a>
+                                <a href="#">Thức uống khác</a>
+                            </div>
+                        </div>
+                        <div class="dropdown-menu5">
+                            <a href="#">Sản phẩm chế biến <i class="fa-solid fa-chevron-right" ></i></a>
+                            <div class="dropdown-menu6">
+                                <a href="#">Bánh mì đông lạnh</a>
+                                <a href="#">Bún, Mỳ sợi các loại </a>
+                                <a href="#">Thức ăn nhẹ</a>
+                                <a href="#">Thực phẩm đông lạnh</a>
+                            </div>
+                        </div>
+                        <a href="#">Phi thực phẩm</a>
+                    </div>
+                </div>
+                <a href="#" class="menu-item">CỬA HÀNG</a>
             </div>
             <div class="middle-section">
                 <img class="logo" src="../img/logo.webp">
@@ -35,23 +63,112 @@
             <div class="right-section">
                 <button class="history">Lịch sử mua hàng</button>
                 <div class="search-container">
-                    <input class="search-bar" type="text" placeholder="search">
-                    <i class="fa-solid fa-magnifying-glass search-icon" style="
-                        color: #35635A;
-                        cursor: pointer;
-                    "></i>
+                    <input class="search-bar" type="text" placeholder="Gõ từ khóa sản phẩm bạn muốn tìm">
+                    <i class="fa-solid fa-magnifying-glass search-icon" style="color: #35635A; cursor: pointer;"></i>
                 </div>
-                
                 <button class="cart">
-                    <i class="fa-solid fa-cart-shopping" style="
-                        color: white;
-                    "></i>
+                    <i class="fa-solid fa-cart-shopping" style="color: white;"></i>
                 </button>
                 <button class="login">Đăng nhập/Đăng ký</button>
-                
             </div>
         </div>
     </div>
-    
+    <div class="container">
+        <div class="title-section">
+            <h1>Sản Phẩm Nổi Bật</h1>
+            <div class="title-line"></div>
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="../img/côt lết heo đen" alt="Côt lết heo đen">
+                <h3>CỐT LẾT HEO ĐEN</h3>
+                <p>Thịt lấy từ trang trại</p>
+                <p class="price">112,500đ</p>
+                <a href="#" class="buy-button">Mua Hàng</a>
+            </div>
+            <div class="product-card">
+                <img src="../img/yến mạch cán mỏng.webp" alt="Yến mạch cán mỏng hữu cơ Health Paradise 500g">
+                <h3>YẾN MẠCH CÁN MỎNG 500GR</h3>
+                <p>Lấy từ nông trại</p>
+                <p class="price">135,000đ</p>
+                <a href="#" class="buy-button">Mua Hàng</a>
+            </div>
+            <div class="product-card">
+                <img src="../img/sữa 200ml.webp" alt="Sữa bò nguyên con KOITA 1LIT">
+                <h3>SỮA BÒ KOITA 200ML</h3>
+                <p>Sữa được lấy từ nông trại</p>
+                <p class="price">49,000đ</p>
+                <a href="#" class="buy-button">Mua Hàng</a>
+            </div>
+            <div class="product-card">
+                <img src="../img/cà rốt.webp" alt="Cà Rốt Hữu Cơ">
+                <h3>CÀ RỐT HỮU CƠ</h3>
+                <p>Cà rốt tươi từ nông trại</p>
+                <p class="price">55,000đ</p>
+                <a href="#" class="buy-button">Mua Hàng</a>
+            </div>
+            <div class="product-card">
+                <img src="../img/bí đỏ hữu cơ.webp" alt="Bí Đỏ Hữu Cơ">
+                <h3>BÍ ĐỎ HỮU CƠ</h3>
+                <p>Bí đỏ tươi từ nông trại</p>
+                <p class="price">47,500đ</p>
+                <a href="#" class="buy-button">Mua Hàng</a>
+            </div>
+            <div class="product-card">
+                <img src="../img/cải xoăn.webp" alt="Cải Xoăn Kale">
+                <h3>CẢI XOĂN KALE</h3>
+                <p>Cải xoăn tươi từ nông trại</p>
+                <p class="price">63,000đ</p>
+                <a href="#" class="buy-button">Mua Hàng</a>
+            </div>
+        </div>
+    </div>
+    <div class="header-section">
+        <div class="header-content">
+            <p class="header-text"> 
+                “ ORGANICA có trang trại rau nhiệt đới đầu tiên tại Việt Nam đạt chứng nhận hữu cơ của Bộ Nông nghiệp Mỹ (USDA) & EU Organic Farming (Liên minh châu Âu)”
+            </p>
+        </div>
+        <div class="certification-logos">
+        <img src="../img/usda.webp" alt="USDA Organic Certification">
+        <div class="certification-logos2">
+        <img src="../img/lá.webp" alt="EU Organic Certification">
+        </div>
+        </div>  
+    </div>
+<div class="content">
+    <div class="column khuyen-mai">
+        <h3>KHUYẾN MÃI</h3>
+        <ul>
+            <li>Sản Phẩm</li>
+            <li>Rau củ quả</li>
+            <li>Trái cây</li>
+            <li>Thịt & Thủy hải sản</li>
+            <li>Thức uống</li>
+            <li>Sản phẩm chế biến</li>
+            <li>Phi thực phẩm</li>
+        </ul>
+    </div>
+
+    <div class="column ve-organica">
+        <h3>VỀ ORGANICA</h3>
+        <ul>
+            <li>Giới thiệu</li>
+            <li>Tầm nhìn & Sứ mệnh</li>
+            <li>Trang trại hữu cơ</li>
+        </ul>
+    </div>
+
+    <div class="column tro-chuyen">
+        <h3>TRÒ CHUYỆN CÙNG ORGANICA</h3>
+        <ul>
+            <li>Ăn hữu cơ</li>
+            <li>Hiểu hữu cơ</li>
+            <li>Sống hữu cơ</li>
+            <li>Organica Blog</li>
+        </ul>
+    </div>
+</div>
+
 </body>
 </html>
