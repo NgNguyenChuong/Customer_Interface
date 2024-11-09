@@ -140,9 +140,7 @@ body {
     width: 100%;
     
 }
-.product-card a{
-    text-decoration: none;
-}
+
 .product-card img {
     width: 100%; /* Đảm bảo hình ảnh nhỏ lại để vừa với khung */
     height: auto;
@@ -153,7 +151,7 @@ body {
 .product-card h3 {
     margin-top: 10px;
     font-size: 16px;
-    color: black;
+    color:#000;
     text-decoration: none;
 }
 
@@ -165,9 +163,9 @@ body {
 .product-card .price {
     margin-top: 10px;
     font-size: 18px;
-    text-decoration: none;
     font-weight: bold;
     color:#fc7035 ;
+    text-decoration: none;
 }
 .product-card .oldprice {
     margin-top: 10px;
@@ -566,4 +564,211 @@ body {
 
 .pagination a:hover:not(.active) {
     background-color: #f1f1f1;
+}
+.breadcrumb {
+    background-color: #28a745; /* Green background color */
+    padding: 10px 20px;
+    color: #ffffff; /* White text color */
+    font-size: 14px;
+    font-weight: 14px;
+    margin-top: 100px;
+}
+
+.breadcrumb a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.breadcrumb span {
+    color: #ffffff;
+}
+.breadcrumb-content{
+    margin-left: 40px;
+    padding: 2px
+}
+
+.product-container {
+    display: flex;
+    flex-direction: column; 
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.product-image {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 70px;
+}
+
+.product-image .main-image {
+    width: 250px;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+}
+
+.product-image .thumbnail-image {
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+    margin-right: 50px;
+}
+
+.product-details {
+    flex: 2;
+    margin-left: 500px;
+}
+
+.product-details h1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.price {
+    color: red;
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 125px;
+    height: 35px;
+}
+
+.quantity-btn {
+    padding: 7px 15px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    border: none;
+    cursor: pointer;
+}
+
+.quantity-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.quantity-input {
+    width: 52px;
+    text-align: center;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.add-to-cart,
+.buy-now {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    color: white;
+    font-size: 13px;
+    font-weight: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 250px;
+    height: 35px;
+}
+.add-to-cart {
+    background-color: #4CAF50;
+}
+
+.add-to-cart:hover {
+    background-color: #45a049;
+}
+
+.buy-now {
+    background-color: #f44336;
+}
+
+.buy-now:hover {
+    background-color: #d32f2f;
+}
+.product-line{
+    width: 500px;
+    height: 2px;
+    background-color: rgb(237, 234, 230);
+    position: absolute;
+    left: 75.6%;
+    top: 26%;
+    transform: translateX(-50%);
+}
+
+.product-description p {
+    margin: 5px 0;
+}
+
+.product-description p strong {
+    font-weight: bold;
+}
+
+.close-link {
+    display: block;
+    color: #4CAF50;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+.close-link:hover {
+    color: #35635A;
+    text-decoration: underline;
+}
+.product-bottom{
+    display: flex;
+    flex: 1;
+    margin-left: 140px;
+    margin-top: 50px;
+
+}
+.product-top{
+    display: flex;
+    flex: 1;
+}
+.description-infor{
+    line-height: 1.4;
+}
+.product-description {
+    display: flex;
+    align-items: flex-start;
+    background-color: white;
+    padding: 20px;
+    color: #333;
+    line-height: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-left: 130px;
+    margin-top: 20px;
+}
+
+.description-title {
+    font-size: 14px;
+    color: #6AA173;
+    font-weight: bold;
+    margin-right: 15px; 
+    padding-bottom: 10px;
+    margin-top: 6px;
+    flex-shrink: 0; 
+    width: 100px; 
+}
+
+.description-content {
+    flex-grow: 1;
 }
