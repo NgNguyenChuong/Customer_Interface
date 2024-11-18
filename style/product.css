@@ -772,3 +772,157 @@ body {
 .description-content {
     flex-grow: 1;
 }
+
+/* Media Queries cho responsive */
+@media screen and (max-width: 1200px) {
+    .header {
+        padding: 0 20px;
+    }
+
+    .product-line {
+        width: 90%;
+        left: 50%;
+    }
+
+    .certification-logos {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .product-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-details {
+        margin-left: 0;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .actions {
+        justify-content: center;
+    }
+
+    .quantity-selector {
+        margin: 0 auto 15px;
+    }
+
+    .product-description {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container-header {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .left-section, .right-section {
+        margin: 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .middle-section {
+        order: -1;
+    }
+
+    .logo {
+        height: 70px;
+    }
+
+    .search-container {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .dropdown-menu, .dropdown-menu2, .dropdown-menu4, .dropdown-menu6 {
+        position: static;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .header-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .certification-logos {
+        margin: 20px auto 0;
+    }
+
+    .product-image {
+        margin-left: 0;
+    }
+
+    .product-image .main-image {
+        width: 200px;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .breadcrumb {
+        margin-top: 150px;
+    }
+
+    .product-container {
+        padding: 15px;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .add-to-cart, .buy-now {
+        width: 100%;
+    }
+
+    .product-description {
+        flex-direction: column;
+    }
+
+    .description-title {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    .right-section {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .search-container {
+        order: -1;
+        width: 100%;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+}
+
+/* Thêm animation cho dropdown menu */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown-menu, .dropdown-menu2, .dropdown-menu4, .dropdown-menu6 {
+    animation: fadeIn 0.3s ease-in-out;
+}

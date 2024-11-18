@@ -1,0 +1,187 @@
+[
+    {
+        "name": "Thành phố Hà Nội",
+        "code": 1,
+        "division_type": "thành phố trung ương",
+        "codename": "thanh_pho_ha_noi",
+        "phone_code": 24,
+        "districts": [
+            {
+                "name": "Quận Ba Đình",
+                "code": "001",
+                "division_type": "quận",
+                "codename": "quan_ba_dinh",
+                "wards": [
+                    {
+                        "name": "Phường Phúc Xá",
+                        "code": "00001",
+                        "division_type": "phường",
+                        "codename": "phuong_phuc_xa"
+                    },
+                    {
+                        "name": "Phường Trúc Bạch",
+                        "code": "00002",
+                        "division_type": "phường",
+                        "codename": "phuong_truc_bach"
+                    }
+                ]
+            },
+            {
+                "name": "Quận Hoàn Kiếm",
+                "code": "002",
+                "division_type": "quận",
+                "codename": "quan_hoan_kiem",
+                "wards": [
+                    {
+                        "name": "Phường Hàng Trống",
+                        "code": "00003",
+                        "division_type": "phường",
+                        "codename": "phuong_hang_trong"
+                    },
+                    {
+                        "name": "Phường Hàng Bông",
+                        "code": "00004",
+                        "division_type": "phường",
+                        "codename": "phuong_hang_bong"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Thành phố Hồ Chí Minh",
+        "code": 79,
+        "division_type": "thành phố trung ương",
+        "codename": "thanh_pho_ho_chi_minh",
+        "phone_code": 28,
+        "districts": [
+            {
+                "name": "Quận 1",
+                "code": "760",
+                "division_type": "quận",
+                "codename": "quan_1",
+                "wards": [
+                    {
+                        "name": "Phường Đa Kao",
+                        "code": "26737",
+                        "division_type": "phường",
+                        "codename": "phuong_da_kao"
+                    },
+                    {
+                        "name": "Phường Bến Nghé",
+                        "code": "26738",
+                        "division_type": "phường",
+                        "codename": "phuong_ben_nghe"
+                    }
+                ]
+            },
+            {
+                "name": "Quận 3",
+                "code": "770",
+                "division_type": "quận",
+                "codename": "quan_3",
+                "wards": [
+                    {
+                        "name": "Phường 1",
+                        "code": "27115",
+                        "division_type": "phường",
+                        "codename": "phuong_1"
+                    },
+                    {
+                        "name": "Phường 2",
+                        "code": "27118",
+                        "division_type": "phường",
+                        "codename": "phuong_2"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Thành phố Đà Nẵng",
+        "code": 48,
+        "division_type": "thành phố trung ương",
+        "codename": "thanh_pho_da_nang",
+        "phone_code": 236,
+        "districts": [
+            {
+                "name": "Quận Hải Châu",
+                "code": "490",
+                "division_type": "quận",
+                "codename": "quan_hai_chau",
+                "wards": [
+                    {
+                        "name": "Phường Thanh Bình",
+                        "code": "20194",
+                        "division_type": "phường",
+                        "codename": "phuong_thanh_binh"
+                    },
+                    {
+                        "name": "Phường Thuận Phước",
+                        "code": "20195",
+                        "division_type": "phường",
+                        "codename": "phuong_thuan_phuoc"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Tỉnh Bình Dương",
+        "code": 74,
+        "division_type": "tỉnh",
+        "codename": "tinh_binh_duong",
+        "phone_code": 274,
+        "districts": [
+            {
+                "name": "Thành phố Thủ Dầu Một",
+                "code": "718",
+                "division_type": "thành phố",
+                "codename": "thanh_pho_thu_dau_mot",
+                "wards": [
+                    {
+                        "name": "Phường Hiệp Thành",
+                        "code": "25741",
+                        "division_type": "phường",
+                        "codename": "phuong_hiep_thanh"
+                    },
+                    {
+                        "name": "Phường Phú Lợi",
+                        "code": "25744",
+                        "division_type": "phường",
+                        "codename": "phuong_phu_loi"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Tỉnh Đồng Nai",
+        "code": 75,
+        "division_type": "tỉnh",
+        "codename": "tinh_dong_nai",
+        "phone_code": 251,
+        "districts": [
+            {
+                "name": "Thành phố Biên Hòa",
+                "code": "731",
+                "division_type": "thành phố",
+                "codename": "thanh_pho_bien_hoa",
+                "wards": [
+                    {
+                        "name": "Phường Hố Nai",
+                        "code": "25888",
+                        "division_type": "phường",
+                        "codename": "phuong_ho_nai"
+                    },
+                    {
+                        "name": "Phường Tân Hiệp",
+                        "code": "25891",
+                        "division_type": "phường",
+                        "codename": "phuong_tan_hiep"
+                    }
+                ]
+            }
+        ]
+    }
+] 

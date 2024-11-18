@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organica - Thanh toán</title>
+    <link rel="stylesheet" href="../style/payment.css">
+    <link rel="stylesheet" href="../icon/css/all.css">
+    <link rel="stylesheet" href="../style/generall.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Organica</h1>
+        <div class="breadcrumb">
+            <a href="./Gio_hang.html">Giỏ hàng</a> &gt;
+            <span>Thông tin giao hàng</span> &gt;
+            <span>Phương thức thanh toán</span>
+        </div>
+
+        <div class="main-content">
+            <div class="shipping-info">
+                <h2>Thông tin giao hàng</h2>
+                <div class="login-prompt">
+                    <span>Bạn đã có tài khoản?</span>
+                    <a href="#" class="login-link">Đăng nhập</a>
+                </div>
+
+                <form class="shipping-form">
+                    <input type="text" placeholder="Họ và tên" required>
+                    <div class="form-row">
+                        <input type="email" placeholder="Email" required>
+                        <input type="tel" placeholder="Số điện thoại" required>
+                    </div>
+
+                    <div class="delivery-section">
+                        <div class="delivery-option">
+                            <label class="radio-option">
+                                <input type="radio" name="delivery" value="delivery" checked>
+                                <span>Giao tận nơi</span>
+                            </label>
+                            
+                            <div id="deliveryAddressForm" class="delivery-form">
+                                <input type="text" placeholder="Địa chỉ" required>
+                                <div class="location-selects">
+                                    <div class="select-group">
+                                        <label>Tỉnh / thành</label>
+                                        <select id="city" name="city">
+                                            <option value="">Chọn tỉnh / thành</option>
+                                        </select>
+                                    </div>
+                                    <div class="select-group">
+                                        <label>Quận / huyện</label>
+                                        <select id="district" name="district">
+                                            <option value="">Chọn quận / huyện</option>
+                                        </select>
+                                    </div>
+                                    <div class="select-group">
+                                        <label>Phường / xã</label>
+                                        <select id="ward" name="ward">
+                                            <option value="">Chọn phường / xã</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="delivery-option">
+                            <label class="radio-option">
+                                <input type="radio" name="delivery" value="store">
+                                <span>Nhận tại cửa hàng</span>
+                            </label>
+                            
+                            <div id="storeAddressForm" class="store-form hidden">
+                                <select id="storeLocation" name="storeLocation">
+                                    <option value="">Chọn cửa hàng</option>
+                                    <option value="store1">Chi nhánh 1 - 123 Nguyễn Văn A, Q.1</option>
+                                    <option value="store2">Chi nhánh 2 - 456 Lê Văn B, Q.2</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="buttons">
+                        <a href="./Gio_hang.html" class="back-btn">Giỏ hàng</a>
+                        <button type="submit" class="next-btn">Tiếp tục đến phương thức thanh toán</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="cart-summary">
+                <div class="cart-items">
+                    <!-- Cart items will be inserted here by JavaScript -->
+                </div>
+                
+                <div class="discount-code">
+                    <input type="text" placeholder="Mã giảm giá">
+                    <button type="button">Sử dụng</button>
+                </div>
+
+                <div class="cart-totals">
+                    <div class="subtotal">
+                        <span>Tạm tính</span>
+                        <span>0₫</span>
+                    </div>
+                    <div class="shipping">
+                        <span>Phí vận chuyển</span>
+                        <span>—</span>
+                    </div>
+                    <div class="total">
+                        <span>Tổng cộng</span>
+                        <span>0₫</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/function.js"></script>
+</body>
+</html>

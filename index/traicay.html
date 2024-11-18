@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Home page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trái cây</title>
     <link rel="stylesheet" href="../style/header.css">
     <link rel="stylesheet" href="../icon/css/all.css">
     <link rel="stylesheet" href="../style/generall.css">
@@ -11,7 +12,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap" rel="stylesheet">
 </head>
 
-    
 <body style="height: 10000px;">
     <div class="container-header">
         <div class="header">
@@ -23,10 +23,7 @@
                         <i class="fa-solid fa-chevron-right"></i> 
                     </a>
                     <div class="dropdown-menu">
-                        <a href="./raucuqua.html"> Rau củ quả
-                            
-
-                        </a>
+                        <a href="./raucuqua.html">Rau củ quả</a>
                         <a href="./traicay.html">Trái cây</a>
                         <div class="dropdown-menu1">
                             <a href="#">Thịt & Thủy hải sản <i class="fa-solid fa-chevron-right"></i></a>
@@ -47,9 +44,9 @@
                             </div>
                         </div>
                         <div class="dropdown-menu5">
-                            <a href="#">Sản phẩm chế biến <i class="fa-solid fa-chevron-right" ></i></a>
+                            <a href="#">Sản phẩm chế biến <i class="fa-solid fa-chevron-right"></i></a>
                             <div class="dropdown-menu6">
-                                <a href="./Bun,mysoicacloai.html">Bún, Mỳ sợi các loại </a>
+                                <a href="./Bun,mysoicacloai.html">Bún, Mỳ sợi các loại</a>
                                 <a href="./Thuc_an_nhe.html">Thức ăn nhẹ</a>
                                 <a href="./Thucphamdonglanh.html">Thực phẩm đông lạnh</a>
                             </div>
@@ -60,7 +57,7 @@
                 <a href="#" class="menu-item">CỬA HÀNG</a>
             </div>
             <div class="middle-section">
-                <a href="./homePage.html"><img class="logo" src="../img/logo.webp"></a>
+                <a href="./homePage.html"><img class="logo" src="../img/logo.webp" alt="Logo"></a>
             </div>
             <div class="right-section">
                 <button class="history">Lịch sử mua hàng</button>
@@ -84,115 +81,185 @@
         </div>
         <div class="product-grid">
             <div class="product-card">
-                <img src="../img/Táo juliet hữu cơ.webp" alt="TÁO JULIET HỮU CƠ">
-                <h3>TÁO JULIET HỮU CƠ</h3>
-                <p class="price">120,500đ</p>
-                <a href="#" class="buy-button">Mua Hàng</a>
+                <a href="../allsanpham/traicay/product_tao.html">
+                    <img src="../img/Táo juliet hữu cơ.webp" alt="TÁO JULIET HỮU CƠ">
+                    <h3>TÁO JULIET HỮU CƠ</h3>
+                    <p class="price">120,500đ</p>
+                </a>
+                <button onclick="addToCart('TÁO JULIET HỮU CƠ', 120500)" class="buy-button" style="width: 100%;">Thêm vào giỏ hàng</button>
             </div>
+
             <div class="product-card">
-                <img src="../img/Bơ booth.webp" alt="BƠ BOOTH">
-                <h3>BƠ BOOTH</h3>
-                <p class="price">70,000đ</p>
-                <a href="#" class="buy-button">Mua Hàng</a>
+                <a href="../allsanpham/traicay/product_booth.html">
+                    <img src="../img/Bơ booth.webp" alt="BƠ BOOTH">
+                    <h3>BƠ BOOTH</h3>
+                    <p class="price">70,000đ</p>
+                </a>
+                <button onclick="addToCart('BƠ BOOTH', 70000)" class="buy-button" style="width: 100%;">Thêm vào giỏ hàng</button>
             </div>
+
             <div class="product-card">
-                <img src="../img/Chuối la ba.webp" alt="CHUỐI LA BA">
-                <h3>CHUỐI LA BA</h3>
-                <p class="price">40,000đ</p>
-                <a href="#" class="buy-button">Mua Hàng</a>
+                <a href="../allsanpham/traicay/product_chuoi.html">
+                    <img src="../img/Chuối la ba.webp" alt="CHUỐI LA BA">
+                    <h3>CHUỐI LA BA</h3>
+                    <p class="price">40,000đ</p>
+                </a>
+                <button onclick="addToCart('CHUỐI LA BA', 40000)" class="buy-button" style="width: 100%;">Thêm vào giỏ hàng</button>
             </div>
+
             <div class="product-card">
-                <img src="../img/chanh dây.webp" alt="CHANH DÂY">
-                <h3>CHANH DÂY</h3>
-                <p class="price">35,000đ</p>
-                <a href="#" class="buy-button">Mua Hàng</a>
+                <a href="../allsanpham/traicay/product_chanhday.html">
+                    <img src="../img/chanh dây.webp" alt="CHANH DÂY">
+                    <h3>CHANH DÂY</h3>
+                    <p class="price">35,000đ</p>
+                </a>
+                <button onclick="addToCart('CHANH DÂY', 35000)" class="buy-button" style="width: 100%;">Thêm vào giỏ hàng</button>
             </div>
+
             <div class="product-card">
-                <img src="../img/Dưa bở.jpg" alt="DƯA BỞ">
-                <h3>DƯA BỞ</h3>
-                <p class="price">40,000đ</p>
-                <a href="#" class="buy-button">Mua Hàng</a>
+                <a href="../allsanpham/traicay/product_duaboi.html">
+                    <img src="../img/Dưa bở.jpg" alt="DƯA BỞ">
+                    <h3>DƯA BỞ</h3>
+                    <p class="price">40,000đ</p>
+                </a>
+                <button onclick="addToCart('DƯA BỞ', 40000)" class="buy-button" style="width: 100%;">Thêm vào giỏ hàng</button>
             </div>
+
             <div class="product-card">
-                <img src="../img/Kiwi vàng hữu cơ.jpg" alt="KIWI VÀNG HỮU CƠ">
-                <h3>KIWI VÀNG HỮU CƠ</h3>
-                <p class="price">60,000đ</p>
-                <a href="#" class="buy-button">Mua Hàng</a>
+                <a href="../allsanpham/traicay/product_kiwi.html">
+                    <img src="../img/Kiwi vàng hữu cơ.jpg" alt="KIWI VÀNG HỮU CƠ">
+                    <h3>KIWI VÀNG HỮU CƠ</h3>
+                    <p class="price">60,000đ</p>
+                </a>
+                <button onclick="addToCart('KIWI VÀNG HỮU CƠ', 60000)" class="buy-button" style="width: 100%;">Thêm vào giỏ hàng</button>
             </div>
+
             <div class="product-card">
-                <img src="../img/Dưa lưới.webp" alt="DƯA LƯỚI">
-                <h3>DƯA LƯỚI</h3>
-                <p class="price">90,000đ</p>
-                <a href="#" class="buy-button">Mua Hàng</a>
+                <a href="../allsanpham/traicay/product_dualuoi.html">
+                    <img src="../img/Dưa lưới.webp" alt="DƯA LƯỚI">
+                    <h3>DƯA LƯỚI</h3>
+                    <p class="price">90,000đ</p>
+                </a>
+                <button onclick="addToCart('DƯA LƯỚI', 90000)" class="buy-button" style="width: 100%;">Thêm vào giỏ hàng</button>
             </div>
+
             <div class="product-card">
-                <img src="../img/Thanh long ruột đỏ.jpg" alt="THANH LONG RUỘT ĐỎ">
-                <h3>THANH LONG RUỘT ĐỎ</h3>
-                <p class="price">75,000đ</p>
-                <a href="#" class="buy-button">Mua Hàng</a>
+                <a href="../allsanpham/traicay/product_thanhlong.html">
+                    <img src="../img/Thanh long ruột đỏ.jpg" alt="THANH LONG RUỘT ĐỎ">
+                    <h3>THANH LONG RUỘT ĐỎ</h3>
+                    <p class="price">75,000đ</p>
+                </a>
+                <button onclick="addToCart('THANH LONG RUỘT ĐỎ', 75000)" class="buy-button" style="width: 100%;">
+                    Thêm vào giỏ hàng
+                </button>
             </div>
+
             <div class="product-card">
-                <img src="../img/Thơm.webp" alt="THƠM">
-                <h3>THƠM</h3>
-                <p class="price">25,000đ</p>
-                <a href="#" class="buy-button">Mua Hàng</a>
+                <a href="../allsanpham/traicay/product_thom.html">
+                    <img src="../img/Thơm.webp" alt="THƠM">
+                    <h3>THƠM</h3>
+                    <p class="price">25,000đ</p>
+                </a>
+                <button onclick="addToCart('THƠM', 25000)" class="buy-button" style="width: 100%;">Thêm vào giỏ hàng</button>
             </div>
+
             <div class="product-card">
-                <img src="../img/Đu đủ.webp" alt="ĐU ĐỦ">
-                <h3>ĐU ĐỦ</h3>
-                <p class="price">30,000đ</p>
-                <a href="#" class="buy-button">Mua Hàng</a>
+                <a href="../allsanpham/traicay/product_dudu.html">
+                    <img src="../img/Đu đủ.webp" alt="ĐU ĐỦ">
+                    <h3>ĐU ĐỦ</h3>
+                    <p class="price">30,000đ</p>
+                </a>
+                <button onclick="addToCart('ĐU ĐỦ', 30000)" class="buy-button" style="width: 100%;">Thêm vào giỏ hàng</button>
             </div>
         </div>
     </div>
+
     <div class="header-section">
         <div class="header-content">
-            <p class="header-text"> 
-                “ ORGANICA có trang trại rau nhiệt đới đầu tiên tại Việt Nam đạt chứng nhận hữu cơ của Bộ Nông nghiệp Mỹ (USDA) & EU Organic Farming (Liên minh châu Âu)”
+            <p class="header-text">
+                "ORGANICA có trang trại rau nhiệt đới đầu tiên tại Việt Nam đạt chứng nhận hữu cơ của Bộ Nông nghiệp Mỹ (USDA) & EU Organic Farming (Liên minh châu Âu)"
             </p>
         </div>
         <div class="certification-logos">
-        <img src="../img/usda.webp" alt="USDA Organic Certification">
-        <div class="certification-logos2">
-        <img src="../img/lá.webp" alt="EU Organic Certification">
+            <img src="../img/usda.webp" alt="USDA Organic Certification">
+            <div class="certification-logos2">
+                <img src="../img/lá.webp" alt="EU Organic Certification">
+            </div>
         </div>
-        </div>  
-    </div>
-<div class="content">
-    <div class="column khuyen-mai">
-        <h3>KHUYẾN MÃI</h3>
-        <ul>
-            <li>Sản Phẩm</li>
-            <li>Rau củ quả
-                div
-            </li>
-            <li>Trái cây</li>
-            <li>Thịt & Thủy hải sản</li>
-            <li>Thức uống</li>
-            <li>Sản phẩm chế biến</li>
-            <li>Phi thực phẩm</li>
-        </ul>
     </div>
 
-    <div class="column ve-organica">
-        <h3>VỀ ORGANICA</h3>
-        <ul>
-            <li>Giới thiệu</li>
-            <li>Tầm nhìn & Sứ mệnh</li>
-            <li>Trang trại hữu cơ</li>
-        </ul>
+    <div class="content">
+        <div class="column khuyen-mai">
+            <h3>KHUYẾN MÃI</h3>
+            <ul>
+                <li>Sản Phẩm</li>
+                <li>Rau củ quả</li>
+                <li>Trái cây</li>
+                <li>Thịt & Thủy hải sản</li>
+                <li>Thức uống</li>
+                <li>Sản phẩm chế biến</li>
+                <li>Phi thực phẩm</li>
+            </ul>
+        </div>
+
+        <div class="column ve-organica">
+            <h3>VỀ ORGANICA</h3>
+            <ul>
+                <li>Giới thiệu</li>
+                <li>Tầm nhìn & Sứ mệnh</li>
+                <li>Trang trại hữu cơ</li>
+            </ul>
+        </div>
+
+        <div class="column tro-chuyen">
+            <h3>TRÒ CHUYỆN CÙNG ORGANICA</h3>
+            <ul>
+                <li>Ăn hữu cơ</li>
+                <li>Hiểu hữu cơ</li>
+                <li>Sống hữu cơ</li>
+                <li>Organica Blog</li>
+            </ul>
+        </div>
     </div>
 
-    <div class="column tro-chuyen">
-        <h3>TRÒ CHUYỆN CÙNG ORGANICA</h3>
-        <ul>
-            <li>Ăn hữu cơ</li>
-            <li>Hiểu hữu cơ</li>
-            <li>Sống hữu cơ</li>
-            <li>Organica Blog</li>
-        </ul>
-    </div>
-</div>
-
+    <script>
+        function addToCart(productName, price) {
+            // Lấy giỏ hàng từ localStorage
+            let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            
+            // Lấy đường dẫn ảnh
+            const imgElement = document.querySelector(`img[alt="${productName}"]`);
+            const imageUrl = imgElement ? imgElement.src : '';
+            
+            // Tìm sản phẩm trong giỏ hàng
+            let existingProduct = cartItems.find(item => item.name === productName);
+            
+            if (existingProduct) {
+                // Nếu sản phẩm đã tồn tại, tăng số lượng
+                existingProduct.quantity += 1;
+            } else {
+                // Nếu sản phẩm chưa tồn tại, thêm mới
+                cartItems.push({
+                    name: productName,
+                    price: price + 'đ',
+                    image: imageUrl,
+                    quantity: 1
+                });
+            }
+            
+            // Lưu vào localStorage
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            
+            // Cập nhật số lượng trên icon giỏ hàng
+            const cartCount = document.querySelector('.cart-count');
+            if (cartCount) {
+                cartCount.textContent = cartItems.length;
+                cartCount.style.display = 'block';
+            }
+            
+            // Hiển thị thông báo
+            alert('Đã thêm sản phẩm vào giỏ hàng!');
+        }
+    </script>
 </body>
 </html>

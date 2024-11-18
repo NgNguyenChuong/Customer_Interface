@@ -13,6 +13,7 @@
 
     
 <body style="height: 10000px;">
+    <script src="../js/cart.js"></script>
     <div class="container-header">
         <div class="header">
             <div class="left-section">
@@ -71,6 +72,7 @@
                 <button class="cart">
                     <a href="./Gio_hang.html">
                         <i class="fa-solid fa-cart-shopping" style="color: white;"></i>
+                        <span class="cart-count">0</span>
                     </a>
                 </button>
                 <button class="login">Đăng nhập/Đăng ký</button>
@@ -82,98 +84,27 @@
             <h1>Giỏ Hàng Của Bạn</h1>
             <div class="title-line"></div>
         </div>
+        
+        <!-- Thêm phần chọn tất cả -->
+        <div class="select-all-container">
+            <label class="checkbox-label">
+                <input type="checkbox" class="select-all" checked>
+                <span class="checkbox-custom"></span>
+                Chọn tất cả
+            </label>
+        </div>
+
         <div class="cart-items">
-            <div class="cart-item">
-                <input type="checkbox" class="select-item" checked> <!-- Checkbox chọn sản phẩm -->
-                <img src="../img/Bắp cải hữu cơ.webp" alt="Bắp cải hữu cơ" class="product-image">
-                <div class="item-details">
-                    <h3>BẮP CẢI HỮU CƠ</h3>
-                    <p class="price">42,500đ</p>
-                    <div class="quantity-control">
-                        <button class="decrease">-</button>
-                        <input type="number" value="1" class="quantity-input">
-                        <button class="increase">+</button>
-                    </div>
-                </div>
-                <button class="remove-button">Xóa</button>
+            <div class="empty-cart-message">
+                <p>Giỏ hàng của bạn đang trống</p>
+                <a href="./Sanpham.html" class="continue-shopping">Tiếp tục mua sắm</a>
             </div>
-            <div class="cart-item">
-                <input type="checkbox" class="select-item" checked> <!-- Checkbox chọn sản phẩm -->
-                <img src="../img/Bắp bò kobe.webp" alt="Bắp bò kobe" class="product-image">
-                <div class="item-details">
-                    <h3>BẮP BÒ KOBE</h3>
-                    <p class="price">900,500đ</p>
-                    <div class="quantity-control">
-                        <button class="decrease">-</button>
-                        <input type="number" value="1" class="quantity-input">
-                        <button class="increase">+</button>
-                    </div>
-                </div>
-                <button class="remove-button">Xóa</button>
-            </div>
-            <div class="cart-item">
-                <input type="checkbox" class="select-item" checked> <!-- Checkbox chọn sản phẩm -->
-                <img src="../img/Đùi gà tỏi karst.webp" alt="Đùi gà tỏi karst" class="product-image">
-                <div class="item-details">
-                    <h3>ĐÙI GÀ TỎI KARST</h3>
-                    <p class="price">90,000đ</p>
-                    <div class="quantity-control">
-                        <button class="decrease">-</button>
-                        <input type="number" value="1" class="quantity-input">
-                        <button class="increase">+</button>
-                    </div>
-                </div>
-                <button class="remove-button">Xóa</button>
-            </div>
-            <div class="cart-item">
-                <input type="checkbox" class="select-item" checked> <!-- Checkbox chọn sản phẩm -->
-                <img src="../img/cá bạc má.webp" alt="Cá bạc má" class="product-image">
-                <div class="item-details">
-                    <h3>CÁ BẠC MÁ</h3>
-                    <p class="price">142,500đ</p>
-                    <div class="quantity-control">
-                        <button class="decrease">-</button>
-                        <input type="number" value="1" class="quantity-input">
-                        <button class="increase">+</button>
-                    </div>
-                </div>
-                <button class="remove-button">Xóa</button>
-            </div>
-            <div class="cart-item">
-                <input type="checkbox" class="select-item" checked> <!-- Checkbox chọn sản phẩm -->
-                <img src="../img/Kiwi vàng hữu cơ.jpg" alt="Kiwi vàng hữu cơ" class="product-image">
-                <div class="item-details">
-                    <h3>KIWI VÀNG HỮU CƠ</h3>
-                    <p class="price">60,000đ</p>
-                    <div class="quantity-control">
-                        <button class="decrease">-</button>
-                        <input type="number" value="1" class="quantity-input">
-                        <button class="increase">+</button>
-                    </div>
-                </div>
-                <button class="remove-button">Xóa</button>
-            </div> 
-            <div class="cart-item">
-                <input type="checkbox" class="select-item" checked> <!-- Checkbox chọn sản phẩm -->
-                <img src="../img/bánh gạo lứt.webp" alt="Bánh gạo lứt" class="product-image">
-                <div class="item-details">
-                    <h3>BÁNH GẠO LỨT</h3>
-                    <p class="price">35,500đ</p>
-                    <div class="quantity-control">
-                        <button class="decrease">-</button>
-                        <input type="number" value="1" class="quantity-input">
-                        <button class="increase">+</button>
-                    </div>
-                </div>
-                <button class="remove-button">Xóa</button>
-            </div> 
         </div>
 
         <!-- Khu vực tổng tiền và thanh toán -->
         <div class="cart-summary">
-            <h3>Tổng Tiền: <span class="total-price">0</span></h3>
-            <button class="checkout-button">Thanh Toán</button>
-        </div>
+            <h3>Tổng Tiền: <span class="total-price">0đ</span></h3>
+            <button class="checkout-button" onclick="proceedToCheckout()">Thanh Toán</button>
         </div>
     </div>
     <div class="header-section">
