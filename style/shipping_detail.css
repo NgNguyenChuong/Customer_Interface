@@ -1,0 +1,165 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.shipping-details {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-top: 20px;
+}
+
+.order-info {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.order-info h2 {
+    color: #35635A;
+    margin: 0 0 10px 0;
+}
+
+.order-date {
+    color: #666;
+}
+
+.tracking-timeline {
+    position: relative;
+    margin: 40px 0;
+}
+
+.timeline-item {
+    display: flex;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 30px;
+    bottom: -30px;
+    width: 2px;
+    background: #ddd;
+}
+
+.timeline-item:last-child::before {
+    display: none;
+}
+
+.status-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.timeline-item.active .status-icon {
+    background: #35635A;
+    color: white;
+}
+
+.status-content {
+    flex: 1;
+}
+
+.status-content h3 {
+    margin: 0 0 5px 0;
+    color: #333;
+}
+
+.status-content p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.delivery-info {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+.delivery-info h3 {
+    color: #35635A;
+    margin: 0 0 20px 0;
+}
+
+.info-grid {
+    display: grid;
+    gap: 15px;
+}
+
+.info-item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 10px;
+}
+
+.label {
+    color: #666;
+    font-weight: 500;
+}
+
+.value {
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .info-item {
+        grid-template-columns: 1fr;
+    }
+    
+    .shipping-details {
+        padding: 15px;
+    }
+}
+
+/* Thêm style cho nút quay lại */
+.back-button {
+    margin-bottom: 20px;
+}
+
+.back-button a {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #46cc6a;
+    color: rgb(18, 18, 18);
+    text-decoration: none;
+    border-radius: 7px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.back-button a i {
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+.back-button a:hover {
+    background-color: #2a4e46;
+    transform: translateX(-5px);
+}
+
+/* Thêm responsive cho nút */
+@media (max-width: 768px) {
+    .back-button {
+        margin: 10px 0;
+    }
+    
+    .back-button a {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+} 
