@@ -1,4 +1,5 @@
 /* Reset CSS */
+
 * {
     margin: 0;
     padding: 0;
@@ -25,12 +26,9 @@ body {
 
 .header {
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    max-width: 1500px; /* Giới hạn độ rộng tối đa của header */
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-between; /* Căn các phần tử trong header ra 2 bên */
-    padding: 0 0px; /* Thêm khoảng cách ngang */
+    padding: 10px 20px;
 }
 
 .left-section {
@@ -43,7 +41,7 @@ body {
 .right-section{
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
     flex-shrink: 0; /* Ngăn các phần tử co lại quá nhiều */
     margin-right: 40px;
 }
@@ -73,7 +71,53 @@ body {
     font-size: 20px;
     cursor: pointer;
 }
+/* Phần đăng nhập */
+.user-dropdown {
+    position: relative;
+    margin-left: -59px;
+}
 
+.user-dropdown .btn {
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+.user-dropdown .btn:hover,
+.user-dropdown .btn:focus {
+    background: none;
+    border: none;
+    opacity: 0.8;
+}
+
+.custom-dropdown {
+    margin-top: 10px;
+    min-width: 200px;
+    padding: 8px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.custom-item {
+    padding: 10px 20px;
+    color: #333;
+}
+
+.custom-item:hover {
+    background-color: #f5f5f5;
+    color: #35635A;
+}
+
+.custom-item i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.divider {
+    margin: 8px 0;
+    border-top: 1px solid #eee;
+}
 .login {
     height: 45px;
     border-radius: 10px;
@@ -96,12 +140,12 @@ body {
     margin-top: 10px; /* Điều chỉnh khoảng cách dưới header */
 }
 .container img{
-    width: 1040px;
-    height: 400px;
+    width: 100%;
+    height: auto;
     position:relative;
     display: block;
     box-sizing: border-box;
-    
+    margin-top:50px
 
 }
 
@@ -194,7 +238,7 @@ body {
 }
 
 .menu-item {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
     color: #000;
     text-decoration: none;
@@ -224,13 +268,54 @@ body {
     height: 25px;
     border: 1px solid rgb(237, 234, 230);
     padding-left: 10px;
+    padding-right: 30px;
     width: 240px;
+    transition: all 0.3s ease;
 }
 
 .search-icon {
     position: absolute;
     right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
 }
+.offcanvas-header{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid rgb(176, 176, 176);
+}
+.offcanvas-body{
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    gap: 10px;
+}
+.dropdown-1{
+    position: relative;
+    font-weight: 500;
+    font-size: 15px;
+    margin-left: -60px;
+    margin-top: 5px;
+    
+}
+.discount{
+   font-size: 15px;
+  margin-left: -60px;
+}
+.fa-user{
+    font-size: 25px;
+    margin-top: 10px;
+}
+/* Mobile search icon */
+.mobile-search-icon {
+    display: none;
+    font-size: 18px;
+    color: #35635A;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
 /* Dropdown styles */
 .dropdown {
     position: relative;
@@ -243,7 +328,7 @@ body {
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 100px;
     background-color: white;
     min-width: 200px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
@@ -252,7 +337,7 @@ body {
     margin-left: 60px;
 }
 
-.dropdown:hover .dropdown-menu {
+.dropdown:hover .dropdown-menu ,.dropdown-1:hover .dropdown-menu  {
     display: flex;
 }
 
@@ -570,242 +655,166 @@ body {
 
 /* Thêm media queries cho responsive */
 
-/* Desktop lớn (>1440px) */
-@media screen and (min-width: 1441px) {
+/* PC (>=1024px) */
+@media screen and (min-width: 1023px) {
     .container-header {
         height: 100px;
     }
-    
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+    .left-section{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-shrink: 0;
+        margin-right: 0px;
+        font-size: 18px;
+    }
+    .right-section{
+        display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-shrink: 0;
+            margin-right: 160px;
+    }
+    .user-dropdown{
+        position: relative;
+        margin-left: -59px;
+    }
+    .dropdown{
+        margin-left: -30px;
+        margin-right: 25px;
+    }
     .logo {
-        height: 90px;
-    }
-
-    .dropdown-menu {
-        margin-left: 60px;
-    }
-
-    .dropdown-toggle {
-        margin-left: 60px;
+        height: 100px;
     }
 
     .search-bar {
-        width: 240px;
+        width: 242px;
+        padding-left: 10px;
+        padding-right: 30px;
+    }
+    .fa-user-circle{
+        font-size: 48px;
+    }
+    .menu-item{
+        font-size: 18px;
+        margin-right: 15px;
+    }
+    .menu-btn, 
+    .mobile-search-icon {
+        display: none;
     }
 }
 
-/* Desktop thường (1024px - 1440px) */
-@media screen and (min-width: 1024px) and (max-width: 1440px) {
+/* Tablet (>=740px và <1024px) */
+@media screen and (min-width: 740px) and (max-width: 1023px) {
     .container-header {
-        height: 90px;
-    }
-    
-    .logo {
         height: 80px;
     }
 
-    .dropdown-menu {
-        margin-left: 40px;
+    .header {
+        padding: 0 14px;
+        gap: 20px;
     }
 
-    .dropdown-toggle {
-        margin-left: 40px;
+    .logo {
+        height: 80px;
     }
-
+    .fa-user-circle{
+        font-size: 40px;
+    }
+    .left-section {
+      display: none;
+    }
+    .right-section{
+        display: flex ;
+        align-items: center;
+        gap: 15px;
+        flex-shrink: 0;
+        margin-right: -75px;
+    }
     .search-bar {
-        width: 200px;
+        width: 180px;
+    }
+
+    .cart {
+        width: 40px;
+        height: 40px;
+    }
+
+    .login {
+        padding: 0 10px;
+        height: 40px;
+    }
+
+    .menu-btn {
+        display: block;
+        font-size: 32px;
+        margin-right: 20px;
+        margin-left: -50px;
+    }
+
+    .mobile-search-icon {
+        display: none;
     }
 }
 
-/* Tablet (768px - 1023px) */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+/* Mobile (<740px) */
+@media screen and  (max-width: 739px) {
     .container-header {
         height: 70px;
     }
 
     .header {
-        justify-content: flex-start;
-        gap: 20px;
-        padding: 0 20px;
-    }
-
-    .middle-section {
-        margin-right: auto;
-    }
-
-    .logo {
-        height: 50px;
-    }
-
-    .right-section {
-        gap: 15px;
-    }
-}
-
-/* Mobile (<768px) */
-@media screen and (max-width: 767px) {
-    .container-header {
-        height: 60px;
-        padding: 0 15px;
-    }
-
-    .header {
-        justify-content: flex-start;
-        gap: 15px;
-    }
-
-    /* Menu icon */
-    .menu-icon {
-        display: block;
-        font-size: 20px;
-        order: 1;
-    }
-
-    /* Logo */
-    .middle-section {
-        order: 2;
-        position: static;
-        transform: none;
-    }
-    
-    .logo {
-        height: 40px;
-    }
-
-    /* Right section */
-    .right-section {
-        order: 3;
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        margin-left: auto;
-    }
-
-    /* Cart */
-    .cart {
-        width: 30px;
-        height: 30px;
-        font-size: 14px;
-    }
-
-    /* Login */
-    .login {
-        font-size: 16px;
-        padding: 0;
-        background: none;
-        border: none;
-    }
-
-    /* Ẩn các phần tử không cần thiết */
-    .search-container,
-    .history,
-    .left-section,
-    .dropdown-menu,
-    .dropdown-toggle {
-        display: none;
-    }
-}
-
-/* Thêm menu hamburger cho mobile */
-.menu-icon {
-    display: none;
-}
-
-@media screen and (max-width: 767px) {
-    .menu-icon {
-        display: block;
-        font-size: 20px;
-        cursor: pointer;
-    }
-}
-
-/* Mobile (<375px - iPhone SE) */
-@media screen and (max-width: 375px) {
-    .container-header {
-        height: 60px;
+        justify-content: space-between;
         padding: 0 10px;
+        gap: 24px;
     }
 
-    .header {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 10px;
-    }
-
-    /* Menu icon */
-    .menu-icon {
+    .menu-btn {
         display: block;
-        font-size: 20px;
-        color: #000;
+        font-size: 32px;
     }
-
-    /* Logo */
+    .right-section{
+        display: flex ;
+        align-items: center;
+        gap: 6px;
+        flex-shrink: 0;
+        margin-right: 0px;
+    }
     .middle-section {
-        flex: 1;
-        display: flex;
-        justify-content: center;
+        flex: 0;
     }
     
     .logo {
-        height: 35px;
+        height: 70px;
     }
 
-    /* Right section */
-    .right-section {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-
-    /* User icon */
-    .login {
-        font-size: 20px;
-        color: #000;
-        background: none;
-        border: none;
-        padding: 0;
-    }
-
-    /* Cart */
     .cart {
-        width: 25px;
-        height: 25px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #22B24C;
-        border-radius: 50%;
-        border: none;
-        position: relative;
+        width: 36px;
+        height: 36px;
+        font-size: 15px;
     }
-
-    .cart i {
-        font-size: 14px;
-    }
-
-    /* Badge */
-    .cart::after {
-        content: "5";
-        position: absolute;
-        top: -5px;
-        right: -5px;
-        background: #fc7035;
-        color: white;
-        width: 16px;
-        height: 16px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 10px;
-    }
-
-    /* Ẩn các phần tử không cần thiết */
     .search-container,
     .history,
     .left-section,
-    .dropdown-menu,
-    .dropdown-toggle {
+    .login,
+    .dropdown,
+    .dropdown-menu {
         display: none;
+    }
+
+    .mobile-search-icon {
+        display: block;
+        font-size: 25px;
+    }
+
+    .offcanvas.offcanvas-end {
+        width: 80%;
     }
 }
