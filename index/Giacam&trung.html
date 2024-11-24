@@ -84,7 +84,7 @@
         <div class="product-grid">
             <div class="product-card">
                 <a href="../allsanpham/giacamvatrung/product_gata.html">
-                    <img src="../img/Gà ta(cổ loa).webp" alt="GÀ TA(CỔ LOA)">
+                    <img src="../img/gata(coloa).webp" alt="GÀ TA(CỔ LOA)">
                     <h3>GÀ TA(CỔ LOA)</h3>
                     <p class="price">110,500đ</p>
                 </a>
@@ -93,7 +93,7 @@
 
             <div class="product-card">
                 <a href="../allsanpham/giacamvatrung/product_gathaomoc.html">
-                    <img src="../img/Gà thảo mộc.webp" alt="GÀ THẢO MỘC">
+                    <img src="../img/gathaomoc.webp" alt="GÀ THẢO MỘC">
                     <h3>GÀ THẢO MỘC</h3>
                     <p class="price">130,000đ</p>
                 </a>
@@ -102,7 +102,7 @@
 
             <div class="product-card">
                 <a href="../allsanpham/giacamvatrung/product_trungga.html">
-                    <img src="../img/trungga.webp" alt="TRỨNG GÀ">
+                    <img src="../img/trunggathavuon.webp" alt="TRỨNG GÀ">
                     <h3>TRỨNG GÀ</h3>
                     <p class="price">45,000đ</p>
                 </a>
@@ -111,20 +111,11 @@
 
             <div class="product-card">
                 <a href="../allsanpham/giacamvatrung/product_trungvit.html">
-                    <img src="../img/Trứng gà thả vườn.webp" alt="TRỨNG VỊT">
+                    <img src="../img/trunggathaomoc.png" alt="TRỨNG VỊT">
                     <h3>TRỨNG VỊT</h3>
                     <p class="price">35,000đ</p>
                 </a>
                 <button onclick="addToCart('TRỨNG VỊT', 35000)" class="buy-button" style="width: 100%;">Thêm vào giỏ hàng</button>
-            </div>
-
-            <div class="product-card">
-                <a href="../allsanpham/giacamvatrung/product_vitxiem.html">
-                    <img src="../img/Trứng vịt thả vườn.webp" alt="VỊT XIÊM">
-                    <h3>VỊT XIÊM</h3>
-                    <p class="price">95,000đ</p>
-                </a>
-                <button onclick="addToCart('VỊT XIÊM', 95000)" class="buy-button" style="width: 100%;">Thêm vào giỏ hàng</button>
             </div>
         </div>
     </div>
@@ -189,9 +180,8 @@
                 // Nếu sản phẩm chưa tồn tại, thêm mới
                 cartItems.push({
                     name: productName,
-                    price: price.toLocaleString('vi-VN'),
+                    price: price,
                     quantity: 1,
-                    // Lấy đường dẫn ảnh từ thẻ img tương ứng
                     image: document.querySelector(`img[alt="${productName}"]`).src
                 });
             }

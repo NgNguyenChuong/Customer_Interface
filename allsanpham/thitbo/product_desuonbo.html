@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dẻ sườn bò Kobe</title>
     <link rel="stylesheet" href="../../style/header.css">
     <link rel="stylesheet" href="../../icon/css/all.css">
@@ -66,7 +67,7 @@
                     <input class="search-bar" type="text" placeholder="Gõ từ khóa sản phẩm bạn muốn tìm">
                     <i class="fa-solid fa-magnifying-glass search-icon" style="color: #35635A; cursor: pointer;"></i>
                 </div>
-                <button class="cart">
+                <button class="cart" onclick="window.location.href='../../index/Gio_hang.html'">
                     <i class="fa-solid fa-cart-shopping" style="color: white;"></i>
                 </button>
                 <button class="login">Đăng nhập/Đăng ký</button>
@@ -128,13 +129,44 @@
         </div>  
     </div>
 
-<script>
-    function confirmAddProduct() {
-        alert("Đã thêm sản phẩm vào giỏ hàng");
-    }
-    function confirmBuyProduct() {
-        alert("Tính năng chưa được phát triển");
-    }
-</script>
+    <script>
+        // Lấy giỏ hàng từ localStorage hoặc khởi tạo mới nếu chưa có
+        let cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+    
+        function confirmAddProduct() {
+            const product = {
+                name: "Dẻ sườn bò Kobe hữu cơ",
+                price: 750000,
+                quantity: 1,
+                image: document.querySelector('.main-image').src
+            };
+    
+            // Kiểm tra xem sản phẩm đã có trong giỏ hàng chưa
+            const existingProductIndex = cart.findIndex(item => item.name === product.name);
+            if (existingProductIndex !== -1) {
+                // Nếu có, tăng số lượng sản phẩm
+                cart[existingProductIndex].quantity += 1;
+            } else {
+                // Nếu chưa, thêm sản phẩm mới vào giỏ hàng
+                cart.push(product);
+            }
+    
+            // Lưu giỏ hàng vào localStorage
+            localStorage.setItem('cartItems', JSON.stringify(cart));
+            alert("Đã thêm sản phẩm vào giỏ hàng");
+        }
+    
+        function openCart() {
+            let cartContent = "Giỏ hàng:\n";
+            cart.forEach(item => {
+                cartContent += `${item.name} - ${item.quantity} x ${item.price}₫\n`;
+            });
+            alert(cartContent || "Giỏ hàng trống");
+        }
+    
+        function confirmBuyProduct() {
+            alert("Tính năng chưa được phát triển");
+        }
+    </script>
 </body>
 </html>

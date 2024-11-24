@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cá thu</title>
+    <title>Gà thảo mộc</title>
     <link rel="stylesheet" href="../../style/header.css">
     <link rel="stylesheet" href="../../icon/css/all.css">
     <link rel="stylesheet" href="../../style/product.css">
@@ -77,99 +77,97 @@
     <div class="breadcrumb">
         <div class="breadcrumb-content">
             <a href="../../index/homePage.html"> Trang chủ ></a> 
-            <a href="../../index/Thuyhaisan.html"> Thủy hải sản ></a>
-            <span>Cá thu</span>
         </div>
     </div>
-<div class="product-container">
-    <div class="product-top">
-        <div class="product-image">
-            <img src="../../img/Cá thu.webp" alt="CÁ THU" class="main-image">
-            <img src="../../img/Cá thu.webp" alt="CÁ THU" class="thumbnail-image">
-        </div>
-        <div class="product-details">
-            <h1>CÁ THU</h1>
-            <div class="product-line"></div>
-            <p class="price"><strong>84,500₫</strong></p>
-            <div class="quantity-selector">
-                <button class="quantity-btn">-</button>
-                <input type="text" value="1" class="quantity-input">
-                <button class="quantity-btn">+</button>
+    <div class="product-container">
+        <div class="product-top">
+            <div class="product-image">
+                <img src="../../img/Gà thảo mộc.webp" alt="Gà thảo mộc" class="main-image">
+                <img src="../../img/Gà thảo mộc.webp" alt="Gà thảo mộc" class="thumbnail-image">
             </div>
-            
-            <div class="actions">
-                <button class="add-to-cart" onclick="confirmAddProduct()">THÊM VÀO GIỎ</button>
-                <button class="buy-now" onclick="confirmBuyProduct()">MUA NGAY</button>
+            <div class="product-details">
+                <h1>Gà thảo mộc</h1>
+                <div class="product-line"></div>
+                <p class="price"> <strong>130,000₫</strong></p>
+                <div class="quantity-selector">
+                    <button class="quantity-btn">-</button>
+                    <input type="text" value="1" class="quantity-input">
+                    <button class="quantity-btn">+</button>
+                </div>
+                
+                <div class="actions">
+                    <button class="add-to-cart" onclick="confirmAddProduct()">THÊM VÀO GIỎ</button>
+                    <button class="buy-now" onclick="confirmBuyProduct()">MUA NGAY</button>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="product-description">
-        <h2 class="description-title">Mô Tả</h2>
-        <div class="description-content">
-            <p><strong>Chứng nhận/Canh tác:</strong> Đánh bắt tự nhiên</p>
-            <p><strong>Xuất xứ:</strong> Vùng biển Việt Nam</p>
-            <p><strong>Đặc điểm:</strong> Cá thu tươi ngon, thịt chắc, béo ngậy</p>
-            <p><strong>Khối lượng:</strong> 500g/phần</p>
-            <p><strong>Hạn sử dụng:</strong> 2-3 ngày trong ngăn mát</p>
-            <div class="description-infor">
-                <p><strong>Hướng dẫn sử dụng:</strong> Thích hợp kho, nướng, hấp...</p>
+        <div class="product-description">
+            <h2 class="description-title">Mô Tả</h2>
+            <div class="description-content">
+                <p><strong>Chứng nhận/ Tiêu chuẩn:</strong> Chứng nhận hữu cơ Việt Nam.</p>
+                <p><strong>Xuất xứ:</strong> Việt Nam</p>
+                <p><strong>Thành phần:</strong> Thịt gà (100%)</p>
+                <p><strong>Khối lượng tịnh:</strong> Xem trên bao bì</p>
+                <p><strong>Hạn sử dụng:</strong> Xem trên bao bì</p>
+                <div class="description-infor">
+                    <p><strong>Hướng dẫn sử dụng:</strong> Nấu chin trước khi dùng</p>
+                </div>
+                <p><strong>Hướng dẫn bảo quản:</strong> Xem trên bao bì</p>
             </div>
-            <p><strong>Hướng dẫn bảo quản:</strong> Bảo quản ở nhiệt độ 0-4°C</p>
+        </div>        
+    </div>
+    <div class="header-section">
+        <div class="header-content">
+            <p class="header-text"> 
+                " ORGANICA có trang trại rau nhiệt đới đầu tiên tại Việt Nam đạt chứng nhận hữu cơ của Bộ Nông nghiệp Mỹ (USDA) & EU Organic Farming (Liên minh châu Âu)"
+            </p>
         </div>
-    </div>        
-</div> 
-<div class="header-section">
-    <div class="header-content">
-        <p class="header-text"> 
-            " ORGANICA có trang trại rau nhiệt đới đầu tiên tại Việt Nam đạt chứng nhận hữu cơ của Bộ Nông nghiệp Mỹ (USDA) & EU Organic Farming (Liên minh châu Âu)"
-        </p>
+        <div class="certification-logos">
+        <img src="../../img/usda.webp" alt="USDA Organic Certification">
+        <div class="certification-logos2">
+        <img src="../../img/lá.webp" alt="EU Organic Certification">
+        </div>
+        </div>  
     </div>
-    <div class="certification-logos">
-    <img src="../../img/usda.webp" alt="USDA Organic Certification">
-    <div class="certification-logos2">
-    <img src="../../img/lá.webp" alt="EU Organic Certification">
-    </div>
-    </div>  
-</div>
 
-<script>
-    // Lấy giỏ hàng từ localStorage hoặc khởi tạo mới nếu chưa có
-    let cart = JSON.parse(localStorage.getItem('cartItems')) || [];
-
-    function confirmAddProduct() {
-        const product = {
-            name: "Cá thu",
-            price: 84500,
-            quantity: 1,
-            image: document.querySelector('.main-image').src
-        };
-
-        // Kiểm tra xem sản phẩm đã có trong giỏ hàng chưa
-        const existingProductIndex = cart.findIndex(item => item.name === product.name);
-        if (existingProductIndex !== -1) {
-            // Nếu có, tăng số lượng sản phẩm
-            cart[existingProductIndex].quantity += 1;
-        } else {
-            // Nếu chưa, thêm sản phẩm mới vào giỏ hàng
-            cart.push(product);
+    <script>
+        // Lấy giỏ hàng từ localStorage hoặc khởi tạo mới nếu chưa có
+        let cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+    
+        function confirmAddProduct() {
+            const product = {
+                name: "Gà thảo mộc",
+                price: 130000,
+                quantity: 1,
+                image: document.querySelector('.main-image').src
+            };
+    
+            // Kiểm tra xem sản phẩm đã có trong giỏ hàng chưa
+            const existingProductIndex = cart.findIndex(item => item.name === product.name);
+            if (existingProductIndex !== -1) {
+                // Nếu có, tăng số lượng sản phẩm
+                cart[existingProductIndex].quantity += 1;
+            } else {
+                // Nếu chưa, thêm sản phẩm mới vào giỏ hàng
+                cart.push(product);
+            }
+    
+            // Lưu giỏ hàng vào localStorage
+            localStorage.setItem('cartItems', JSON.stringify(cart));
+            alert("Đã thêm sản phẩm vào giỏ hàng");
         }
-
-        // Lưu giỏ hàng vào localStorage
-        localStorage.setItem('cartItems', JSON.stringify(cart));
-        alert("Đã thêm sản phẩm vào giỏ hàng");
-    }
-
-    function openCart() {
-        let cartContent = "Giỏ hàng:\n";
-        cart.forEach(item => {
-            cartContent += `${item.name} - ${item.quantity} x ${item.price}₫\n`;
-        });
-        alert(cartContent || "Giỏ hàng trống");
-    }
-
-    function confirmBuyProduct() {
-        alert("Tính năng chưa được phát triển");
-    }
-</script>
+    
+        function openCart() {
+            let cartContent = "Giỏ hàng:\n";
+            cart.forEach(item => {
+                cartContent += `${item.name} - ${item.quantity} x ${item.price}₫\n`;
+            });
+            alert(cartContent || "Giỏ hàng trống");
+        }
+    
+        function confirmBuyProduct() {
+            alert("Tính năng chưa được phát triển");
+        }
+    </script>
 </body>
 </html>

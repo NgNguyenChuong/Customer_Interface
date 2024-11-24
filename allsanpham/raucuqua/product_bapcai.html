@@ -66,7 +66,7 @@
                     <input class="search-bar" type="text" placeholder="Gõ từ khóa sản phẩm bạn muốn tìm">
                     <i class="fa-solid fa-magnifying-glass search-icon" style="color: #35635A; cursor: pointer;"></i>
                 </div>
-                <button class="cart">
+                <button class="cart" onclick="window.location.href='../../index/Gio_hang.html'">
                     <i class="fa-solid fa-cart-shopping" style="color: white;"></i>
                 </button>
                 <button class="login">Đăng nhập/Đăng ký</button>
@@ -98,7 +98,7 @@
                 
                 <div class="actions">
                     <button class="add-to-cart" onclick="confirmAddProduct()">THÊM VÀO GIỎ</button>
-                    <button class="buy-now" onclick="window.location.href='../../index/Thanhtoan.html'">MUA NGAY</button>
+                    <button class="buy-now" onclick="confirmBuyProduct()">MUA NGAY</button>
                 </div>
             </div>
         </div>
@@ -127,29 +127,44 @@
             </div>
         </div>  
     </div>
-
-<script>
-    function confirmAddProduct() {
-        alert("Đã thêm sản phẩm vào giỏ hàng");
-    }
+    <script>
+        // Lấy giỏ hàng từ localStorage hoặc khởi tạo mới nếu chưa có
+        let cart = JSON.parse(localStorage.getItem('cartItems')) || [];
     
-    document.addEventListener('DOMContentLoaded', function() {
-        const minusBtn = document.querySelector('.minus');
-        const plusBtn = document.querySelector('.plus');
-        const input = document.querySelector('.quantity-input');
-
-        minusBtn.addEventListener('click', function() {
-            const currentValue = parseInt(input.value);
-            if (currentValue > 1) {
-                input.value = currentValue - 1;
+        function confirmAddProduct() {
+            const product = {
+                name: "Bắp cải hữu cơ",
+                price: 42500,
+                quantity: 1,
+                image: document.querySelector('.main-image').src
+            };
+    
+            // Kiểm tra xem sản phẩm đã có trong giỏ hàng chưa
+            const existingProductIndex = cart.findIndex(item => item.name === product.name);
+            if (existingProductIndex !== -1) {
+                // Nếu có, tăng số lượng sản phẩm
+                cart[existingProductIndex].quantity += 1;
+            } else {
+                // Nếu chưa, thêm sản phẩm mới vào giỏ hàng
+                cart.push(product);
             }
-        });
-
-        plusBtn.addEventListener('click', function() {
-            const currentValue = parseInt(input.value);
-            input.value = currentValue + 1;
-        });
-    });
-</script>
+    
+            // Lưu giỏ hàng vào localStorage
+            localStorage.setItem('cartItems', JSON.stringify(cart));
+            alert("Đã thêm sản phẩm vào giỏ hàng");
+        }
+    
+        function openCart() {
+            let cartContent = "Giỏ hàng:\n";
+            cart.forEach(item => {
+                cartContent += `${item.name} - ${item.quantity} x ${item.price}₫\n`;
+            });
+            alert(cartContent || "Giỏ hàng trống");
+        }
+    
+        function confirmBuyProduct() {
+            alert("Tính năng chưa được phát triển");
+        }
+    </script>
 </body>
 </html>
