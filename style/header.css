@@ -656,56 +656,59 @@ body {
 /* Thêm media queries cho responsive */
 
 /* PC (>=1024px) */
-@media screen and (min-width: 1023px) {
+@media screen and (min-width: 1024px) {
+ 
     .container-header {
         height: 100px;
     }
-    .header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
+
+    .header {
+        padding: 0 14px;
+        gap: 20px;
     }
-    .left-section{
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        flex-shrink: 0;
-        margin-right: 0px;
-        font-size: 18px;
+
+    .logo {
+        height: 85px;
+    }
+    .fa-user-circle{
+        font-size: 45px;
+    }
+    .left-section {
+        margin-left: -110px;
+    }
+    .dropdown {
+    margin-left: -32px;
+    margin-right: 25px;
+    }
+    .menu-item {
+        margin-right: -40px; 
     }
     .right-section{
         display: flex;
-            align-items: center;
-            gap: 15px;
-            flex-shrink: 0;
-            margin-right: 160px;
+        align-items: center;
+        gap: 12px;
+        flex-shrink: 0;
+        margin-right: -55px;
+        margin-left: -15px;
     }
-    .user-dropdown{
-        position: relative;
-        margin-left: -59px;
-    }
-    .dropdown{
-        margin-left: -30px;
-        margin-right: 25px;
-    }
-    .logo {
-        height: 100px;
+    .search-bar {
+        width: 180px;
     }
 
-    .search-bar {
-        width: 242px;
-        padding-left: 10px;
-        padding-right: 30px;
+    .cart {
+        width: 40px;
+        height: 40px;
     }
-    .fa-user-circle{
-        font-size: 48px;
+
+    .login {
+        padding: 0 10px;
+        height: 40px;
     }
-    .menu-item{
-        font-size: 18px;
-        margin-right: 15px;
+
+    .menu-btn {
+      display:none;
     }
-    .menu-btn, 
+
     .mobile-search-icon {
         display: none;
     }
