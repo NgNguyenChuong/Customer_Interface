@@ -114,3 +114,42 @@
     font-size: 0.9rem;
     color: #666;
 }
+
+.order-status-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin: 20px 0;
+    padding: 10px 0;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.status-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.status-button:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.status-button.pending {
+    background-color: #f0ad4e;
+}
+
+.status-button.shipping {
+    background-color: #5bc0de;
+}
+
+.status-button.delivered {
+    background-color: #5cb85c;
+}
