@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,23 +10,98 @@
     <link rel="stylesheet" href="../style/generall.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../icon/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../icon/css/all.min.css">
+ 
 </head>
 
-    
+
 <body style="height: 10000px;">
     <div class="container-header">
         <div class="header">
+            <div class="menu-btn">
+                <i class="fa-solid fa-list" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                    aria-controls="offcanvasRight"></i>
+                <!-- <button  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button> -->
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                    aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <i class="fa-regular fa-user" id="offcanvasRightLabel"></i>
+                        <h5 style="margin-top: 10px; margin-left: 10px;"> Người dùng 1 
+                         </h5>
+                         <button href="#" style="border-style: solid; background-color: rgb(103, 103, 199); font-size: 16px; color:white; border-radius: 20px; height: 40px; width: 135px;margin-left: 6px; margin-top: 10px;"><b>Chưa đăng nhập</b></button>
+                       
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div class="store">
+                            <a href="#" class="menu-item">CỬA HÀNG</a>
+                            </div>
+                        <div class="discount">
+                            <a href="./Khuyenmai.html" class="dropdown-toggle">KHUYẾN MÃI </a>
+                        </div>
+
+                        <div class="dropdown-1">
+                            <a href="./Sanpham.html" class="dropdown-toggle">
+                                SẢN PHẨM
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                            <div class="dropdown-menu">
+
+                                <a href="./raucuqua.html"> Rau củ quả
+
+
+                                </a>
+                                <a href="./traicay.html">Trái cây</a>
+                                <div class="dropdown-menu1">
+                                    <a href="#">Thịt & Thủy hải sản <i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="dropdown-menu2">
+                                        <a href="./Thitheo.html">Thịt heo</a>
+                                        <a href="./Thitbo.html">Thịt bò</a>
+                                        <a href="./Giacam&trung.html">Gia cầm & Trứng</a>
+                                        <a href="./Thuyhaisan.html">Thủy hải sản</a>
+                                    </div>
+                                </div>
+                                <div class="dropdown-menu3">
+                                    <a href="#">Thức uống <i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="dropdown-menu4">
+                                        <a href="./Travacaphe.html">Trà và Cà phê</a>
+                                        <a href="./Sua.html">Sữa</a>
+                                        <a href="./Nuocep&sinhto.html">Nước ép & Sinh tố</a>
+                                        <a href="./Thucuongkhac.html">Thức uống khác</a>
+                                    </div>
+                                </div>
+                                <div class="dropdown-menu5">
+                                    <a href="#">Sản phẩm chế biến <i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="dropdown-menu6">
+                                        <a href="./Bun,mysoicacloai.html">Bún, Mỳ sợi các loại </a>
+                                        <a href="./Thuc_an_nhe.html">Thức ăn nhẹ</a>
+                                        <a href="./Thucphamdonglanh.html">Thực phẩm đông lạnh</a>
+                                    </div>
+                                </div>
+                                <a href="./Phithucpham.html">Phi thực phẩm</a>
+                            </div>
+                        </div>
+
+                    
+                    </div>
+                </div>
+            </div>
+
             <div class="left-section">
                 <a href="./Khuyenmai.html" class="dropdown-toggle">KHUYẾN MÃI </a>
                 <div class="dropdown">
                     <a href="./Sanpham.html" class="dropdown-toggle">
-                        SẢN PHẨM 
-                        <i class="fa-solid fa-chevron-right"></i> 
+                        SẢN PHẨM
+                        <i class="fa-solid fa-chevron-right"></i>
                     </a>
                     <div class="dropdown-menu">
                         <a href="./raucuqua.html"> Rau củ quả
-                            
 
                         </a>
                         <a href="./traicay.html">Trái cây</a>
@@ -48,7 +124,7 @@
                             </div>
                         </div>
                         <div class="dropdown-menu5">
-                            <a href="#">Sản phẩm chế biến <i class="fa-solid fa-chevron-right" ></i></a>
+                            <a href="#">Sản phẩm chế biến <i class="fa-solid fa-chevron-right"></i></a>
                             <div class="dropdown-menu6">
                                 <a href="./Bun,mysoicacloai.html">Bún, Mỳ sợi các loại </a>
                                 <a href="./Thuc_an_nhe.html">Thức ăn nhẹ</a>
@@ -61,20 +137,35 @@
                 <a href="#" class="menu-item">CỬA HÀNG</a>
             </div>
             <div class="middle-section">
-                <a href="./homePage.html"><img class="logo" src="../img/logo.webp"></a>
+                <a href="./homePage.html"><img class="logo" src="../img/logoorganic.webp"></a>
             </div>
             <div class="right-section">
                 <button class="history">Lịch sử mua hàng</button>
                 <div class="search-container">
                     <input class="search-bar" type="text" placeholder="Gõ từ khóa sản phẩm bạn muốn tìm">
-                    <i class="fa-solid fa-magnifying-glass search-icon" style="color: #35635A; cursor: pointer;"></i>
+                    <div class="search-icon">
+                        <i class="fa-solid fa-magnifying-glass" style="color: #35635A;"></i>
+                    </div>
                 </div>
-                <button class="cart">
-                    <a href="./Gio_hang.html">
-                        <i class="fa-solid fa-cart-shopping" style="color: white;"></i>
+                <div class="cart-user-group">
+                    <a href="./Gio_hang.html" class="cart-link">
+                        <button class="cart">
+                            <i class="fa-solid fa-cart-shopping" style="color: white;"></i>
+                        </button>
                     </a>
-                </button>
-                <button class="login">Đăng nhập/Đăng ký</button>
+                    <div class="user-dropdown">
+                        <button class="btn dropdown-toggle user-icon" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user-circle" style="font-size: 46px;"></i>
+                        </button>
+                        
+                        <ul class="dropdown-menu dropdown-menu-end custom-dropdown">
+                            <li><a class="dropdown-item custom-item" href="#"><i class="fas fa-sign-in-alt"></i> Đăng nhập</a></li>
+                            <li><a class="dropdown-item custom-item" href="#"><i class="fas fa-user-plus"></i> Đăng ký</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item custom-item" href="#"><i class="fas fa-history"></i> Lịch sử đơn hàng</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -86,7 +177,7 @@
         <div class="product-grid">
             <div class="product-card">
                 <a href="../allsanpham/thitbo/product_bapbo.html">
-                <img src="../img/Bắp bò kobe.webp" alt="BẮP BÒ KOBE">
+                <img src="../img/bapbokobe.webp" alt="BẮP BÒ KOBE">
                 <h3>BẮP BÒ KOBE</h3>
                 <p class="price">900,500đ</p>
                 </a>
@@ -94,7 +185,7 @@
             </div>
             <div class="product-card">
                 <a href="../allsanpham/thitbo/product_ganbo.html">
-                <img src="../img/Gân bò Kobe.webp" alt="GÂN BÒ KOBE">
+                <img src="../img/ganbokobe.webp" alt="GÂN BÒ KOBE">
                 <h3>GÂN BÒ KOBE</h3>
                 <p class="price">200,000đ</p>
                 </a>
@@ -102,7 +193,7 @@
             </div>
             <div class="product-card">
                 <a href="../allsanpham/thitbo/product_nambo.html">
-                <img src="../img/Nạm bò kobe.webp" alt="NẠM BÒ KOBE">
+                <img src="../img/nambokobe.webp" alt="NẠM BÒ KOBE">
                 <h3>NẠM BÒ KOBE</h3>
                 <p class="price">700,000đ</p>
                 </a>
@@ -110,7 +201,7 @@
             </div>
             <div class="product-card">
                 <a href="../allsanpham/thitbo/product_bapbo1.html">
-                <img src="../img/Bắp bò karst.jpg" alt="BẮP BÒ KARST">
+                <img src="../img/bapbokrast.jpg" alt="BẮP BÒ KARST">
                 <h3>BẮP BÒ KARST</h3>
                 <p class="price">700,500đ</p>
                 </a>
@@ -118,7 +209,7 @@
             </div>
             <div class="product-card">
                 <a href="../allsanpham/thitbo/product_filletbo.html">
-                <img src="../img/Fillet bò karst.webp" alt="FILLET BÒ KARST">
+                <img src="../img/filletbokarst.webp" alt="FILLET BÒ KARST">
                 <h3>FILLET BÒ KARST</h3>
                 <p class="price">650,000đ</p>
                 </a>
@@ -126,7 +217,7 @@
             </div>
             <div class="product-card">
                 <a href="../allsanpham/thitbo/product_suonbo.html">
-                <img src="../img/Sườn bò karst.jpg" alt="SƯỜN BÒ KARST">
+                <img src="../img/suonbokarst.jpg" alt="SƯỜN BÒ KARST">
                 <h3>SƯỜN BÒ KARST</h3>
                 <p class="price">500,000đ</p>
                 </a>
@@ -134,7 +225,7 @@
             </div>
             <div class="product-card">
                 <a href="../allsanpham/thitbo/product_ongbo.html">
-                <img src="../img/Xương ống bò kobe.webp" alt="XƯƠNG ỐNG BÒ KOBE">
+                <img src="../img/xuongongbokobe.webp" alt="XƯƠNG ỐNG BÒ KOBE">
                 <h3>XƯƠNG ỐNG BÒ KOBE</h3>
                 <p class="price">670,500đ</p>
                 </a>
@@ -142,27 +233,11 @@
             </div>
             <div class="product-card">
                 <a href="../allsanpham/thitbo/product_desuonbo.html">
-                <img src="../img/Dẻ sườn bò kobe.jpg" alt="DẺ SƯỜN BÒ KOBE">
+                <img src="../img/desuonbokobe.jpg" alt="DẺ SƯỜN BÒ KOBE">
                 <h3>DẺ SƯỜN BÒ KOBE</h3>
                 <p class="price">750,000đ</p>
                 </a>
                 <button onclick="addToCart('DẺ SƯỜN BÒ KOBE', 750000)" class="buy-button" style="width: 100%;">Thêm vào giỏ hàng</button>
-            </div>
-            <div class="product-card">
-                <a href="../allsanpham/thitbo/product_vaibobo.html">
-                <img src="../img/Lõi vai bò kobe.webp" alt="lÕI VAI BÒ KOBE">
-                <h3>LÕI VAI BÒ KOBE</h3>
-                <p class="price">350,500đ</p>
-                </a>
-                <button onclick="addToCart('LÕI VAI BÒ KOBE', 350500)" class="buy-button" style="width: 100%;">Thêm vào giỏ hàng</button>
-            </div>
-            <div class="product-card">
-                <a href="../allsanpham/thitbo/product_mangbo.html">
-                <img src="../img/Thăn mông bò kobe.webp" alt="THĂN MÔNG BÒ KOBE">
-                <h3>THĂN MÔNG BÒ KOBE</h3>
-                <p class="price">1,000,000đ</p>
-                </a>
-                <button onclick="addToCart('THĂN MÔNG BÒ KOBE', 1000000)" class="buy-button" style="width: 100%;">Thêm vào giỏ hàng</button>
             </div>
         </div>
     </div>
@@ -175,7 +250,7 @@
         <div class="certification-logos">
         <img src="../img/usda.webp" alt="USDA Organic Certification">
         <div class="certification-logos2">
-        <img src="../img/lá.webp" alt="EU Organic Certification">
+        <img src="../img/la.webp" alt="EU Organic Certification">
         </div>
         </div>  
     </div>
@@ -244,6 +319,6 @@ function addToCart(productName, price) {
     alert('Đã thêm sản phẩm vào giỏ hàng!');
 }
 </script>
-
+<script src="../icon/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
