@@ -700,6 +700,9 @@ body {
         padding: 8px 12px;
         font-size: 14px;
     }
+    .fa-user-circle {
+        margin-right: 10px;
+    }
 }
 
 /* Tablet (768px - 1023px) */
@@ -1009,6 +1012,9 @@ body {
     .container-header {
         height: 80px;
     }
+    .fa-user-circle {
+        margin-right: 100px;
+    }
 }
 
 /* Desktop (>=1024px) */
@@ -1102,7 +1108,7 @@ body {
 }
 
 /* Tablet (>=768px và <1024px) */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
     .container-header {
         height: 80px;
     }
@@ -1216,6 +1222,7 @@ body {
 
     .fa-user-circle {
         font-size: 30px;
+        margin-right: 100px;
     }
 }
 
