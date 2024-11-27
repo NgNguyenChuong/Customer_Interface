@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <title>Chi tiết vận chuyển</title>
+    <link rel="stylesheet" href="../style/header.css">
+    <link rel="stylesheet" href="../icon/css/all.css">
+    <link rel="stylesheet" href="../style/generall.css">
+    <link rel="stylesheet" href="../style/shipping_detail.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="back-button">
+            <a href="./Da_giao_hang.html">
+                <i class="fas fa-arrow-left"></i>
+                Quay lại lịch sử mua hàng
+            </a>
+        </div>
+        
+        <div class="shipping-details">
+            <div class="order-info">
+                <h2>Chi Tiết Đơn Hàng #ORD240313003</h2>
+                <p class="order-date">Ngày đặt hàng: 13/03/2024</p>
+                <button class="return-button">Yêu cầu trả hàng</button>
+            </div>
+
+            <div class="tracking-timeline">
+                <div class="timeline-item active">
+                    <div class="status-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="status-content">
+                        <h3>Đã Xác Nhận Đơn Hàng</h3>
+                        <p>13/03/2024 - 08:30</p>
+                        <p>Đơn hàng của bạn đã được xác nhận</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item active">
+                    <div class="status-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <div class="status-content">
+                        <h3>Đã Đóng Gói</h3>
+                        <p>13/03/2024 - 09:15</p>
+                        <p>Đơn hàng đã được đóng gói tại kho</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item active">
+                    <div class="status-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <div class="status-content">
+                        <h3>Đã Vận Chuyển</h3>
+                        <p>13/03/2024 - 10:30</p>
+                        <p>Đơn hàng đang được vận chuyển đến địa chỉ của bạn</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item active">
+                    <div class="status-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="status-content">
+                        <h3>Đã Giao Hàng Thành Công</h3>
+                        <p>13/03/2024 - 14:45</p>
+                        <p>Đơn hàng đã được giao thành công</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-products">
+                <h3>Sản Phẩm Đã Mua</h3>
+                <div class="product-list">
+                    <div class="product-item">
+                        <img src="../img/Thăn mông bò kobe.webp" alt="Thăn mông bò kobe" class="product-image">
+                        <div class="product-details">
+                            <div class="product-name">
+                                <h4>THĂN MÔNG BÒ KOBE</h4>
+                            </div>
+                            <div class="price-qty">
+                                <p class="price">1,000,000đ</p>
+                                <p class="quantity">x1</p>
+                            </div>
+                            <p class="subtotal">1,000,000đ</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-summary">
+                    <div class="summary-item">
+                        <span>Tổng tiền hàng:</span>
+                        <span>1,000,000đ</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Phí vận chuyển:</span>
+                        <span>30,000đ</span>
+                    </div>
+                    <div class="summary-item total">
+                        <span>Tổng thanh toán:</span>
+                        <span>1,030,000đ</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="delivery-info">
+                <h3>Thông Tin Giao Hàng</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="label">Người nhận:</span>
+                        <span class="value">Trần Văn E</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Số điện thoại:</span>
+                        <span class="value">0909345678</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Địa chỉ:</span>
+                        <span class="value">456 Đường MNO, Quận 5, TP.HCM</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Ghi chú:</span>
+                        <span class="value">Giao hàng giờ hành chính</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="returnModal" class="modal">
+        <div class="modal-content">
+            <h3 class="modal-title">Xác nhận yêu cầu trả hàng</h3>
+            <p class="modal-text">Bạn có chắc chắn muốn yêu cầu trả hàng cho đơn hàng này không?</p>
+            <div class="modal-buttons">
+                <button class="modal-button ok" onclick="handleReturn()">OK</button>
+                <button class="modal-button cancel" onclick="closeModal()">Hủy</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    const modal = document.getElementById('returnModal');
+    const returnButton = document.querySelector('.return-button');
+
+    returnButton.addEventListener('click', () => {
+        modal.style.display = 'block';
+    });
+
+    function closeModal() {
+        modal.style.display = 'none';
+    }
+
+    function handleReturn() {
+        alert('Yêu cầu trả hàng đã được gửi!');
+        closeModal();
+    }
+
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            closeModal();
+        }
+    }
+    </script>
+</body>
+</html> 
