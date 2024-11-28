@@ -533,3 +533,18 @@ a.btn-goback:hover {
   display: block;
   margin-top: 5px;
 }
+
+.links {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.form-signup, .form-signin {
+    position: relative;
+    background: transparent;
+}
+
+.success {
+    background: transparent;
+}
