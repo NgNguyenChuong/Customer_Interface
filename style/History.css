@@ -1,7 +1,7 @@
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 20px !important;
 }
 .container img {
     width: 20%;
@@ -11,155 +11,277 @@
 
 
 .order-history {
-    padding: 15px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    width: 100%;
-    height: 60%;
-    padding-bottom: 100px;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+    padding: 15px 0 !important;
+    width: 100% !important;
+    max-width: 900px !important;
+    margin: 0 auto !important;
 }
 
 .order-item {
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 4px;
-    background: #fff;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
-    
+    background: #ffffff !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 6px !important;
+    padding: 12px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+    transition: transform 0.2s, box-shadow 0.2s !important;
+    max-width: 400px !important;
+    margin: 0 auto !important;
+}
+
+.order-item:hover {
+    transform: none !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
 }
 
 .order-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    cursor: pointer;
-}
-
-.order-link:hover .order-item {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-decoration: none !important;
+    color: inherit !important;
+    cursor: default !important;
 }
 
 .order-link:hover {
-    color: inherit;
+    color: inherit !important;
 }
 
 .order-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 10px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #eee;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    margin-bottom: 8px !important;
+    padding-bottom: 8px !important;
+    border-bottom: 1px solid #eee !important;
 }
 
 .order-info {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
 }
 
 .order-number {
-    font-weight: 500;
-    color: #35635A;
-    font-size: 0.85rem;
+    font-size: 1rem !important;
+    color: #203d37 !important;
 }
 
 .order-status {
-    font-weight: bold;
-    color: #0040ff;
-    font-size: 0.9rem;
-    padding: 4px 8px;
-    border-radius: 4px;
-    background: rgba(126, 130, 132, 0.1);
+    padding: 3px 8px !important;
+    border-radius: 4px !important;
+    font-size: 0.75rem !important;
+    font-weight: 500 !important;
+}
+
+.order-status.pending {
+    background-color: #fff3cd !important;
+    color: #856404 !important;
+    border: 1px solid #ffeeba !important;
+}
+
+.order-status.shipping {
+    background-color: #cce5ff !important;
+    color: #004085 !important;
+}
+
+.order-status.delivered {
+    background-color: #d4edda !important;
+    color: #155724 !important;
 }
 
 .order-details {
-    display: flex;
-    gap: 15px;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 6px 0 !important;
 }
 
 .product-image {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    border-radius: 4px;
+    width: 60px !important;
+    height: 60px !important;
+    object-fit: cover !important;
+    border-radius: 4px !important;
 }
 
 .item-info {
-    flex-grow: 1;
+    flex: 1 !important;
 }
 
 .item-info h3 {
-    font-size: 0.85rem;
-    margin: 0 0 4px 0;
+    font-size: 0.85rem !important;
+    margin: 0 0 3px 0 !important;
+    font-weight: 500 !important;
 }
 
 .order-date {
-    color: #666;
+    font-size: 0.9rem !important;
+    color: #203d37!important;
 }
 
 .order-total {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-top: 10px;
-    padding-top: 10px;
-    border-top: 1px solid #eee;
-    gap: 8px;
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    margin-top: 8px !important;
+    padding-top: 8px !important;
+    border-top: 1px solid #eee !important;
+    gap: 8px !important;
 }
 
 .total-amount {
-    font-weight: bold;
-    color: #35635A;
-    font-size: 0.95rem;
+    font-weight: 600 !important;
+    color: #35635A !important;
+    font-size: 0.9rem !important;
 }
 
 .item-info .price,
 .item-info .quantity {
-    margin: 5px 0;
-    font-size: 0.9rem;
-    color: #666;
+    font-size: 0.8rem !important;
+    color: #666 !important;
+    margin: 2px 0 !important;
 }
 
 .order-status-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
-    margin: 20px 0;
-    padding: 10px 0;
-    background-color: #f8f9fa;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex !important;
+    justify-content: center !important;
+    gap: 20px !important;
+    margin: 30px 0 !important;
+    padding: 10px 0 !important;
+    flex-wrap: wrap !important;
 }
 
 .status-button {
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 5px;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, box-shadow 0.3s;
-}
-
-.status-button:hover {
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    min-width: 160px !important;
+    padding: 12px 25px !important;
+    border-radius: 30px !important;
+    font-size: 0.95rem !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    text-align: center !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
 }
 
 .status-button.pending {
-    background-color: #f0ad4e;
+    background-color: #fff !important;
+    color: #856404 !important;
+    border: 2px solid #ffeeba !important;
+}
+
+.status-button.pending:hover {
+    background-color: #fff3cd !important;
+    border-color: #856404 !important;
 }
 
 .status-button.shipping {
-    background-color: #5bc0de;
+    background-color: #fff !important;
+    color: #004085 !important;
+    border: 2px solid #b8daff !important;
+}
+
+.status-button.shipping:hover {
+    background-color: #cce5ff !important;
+    border-color: #004085 !important;
 }
 
 .status-button.delivered {
-    background-color: #5cb85c;
+    background-color: #fff !important;
+    color: #155724 !important;
+    border: 2px solid #c3e6cb !important;
+}
+
+.status-button.delivered:hover {
+    background-color: #d4edda !important;
+    border-color: #155724 !important;
+}
+
+.status-button.active {
+    transform: scale(1.05) !important;
+    font-weight: 600 !important;
+}
+
+.status-button.pending.active {
+    background-color: #fff3cd !important;
+    border-color: #856404 !important;
+}
+
+.status-button.shipping.active {
+    background-color: #cce5ff !important;
+    border-color: #004085 !important;
+}
+
+.status-button.delivered.active {
+    background-color: #d4edda !important;
+    border-color: #155724 !important;
+}
+
+.status-button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+@media (max-width: 992px) {
+    .order-history {
+        gap: 15px !important;
+        max-width: 800px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .order-history {
+        grid-template-columns: 1fr !important;
+        max-width: 450px !important;
+    }
+
+    .order-item {
+        max-width: 100% !important;
+    }
+
+    .order-status-buttons {
+        flex-direction: row !important;
+        gap: 15px !important;
+        margin: 20px 0 !important;
+    }
+
+    .status-button {
+        min-width: 120px !important;
+        padding: 8px 15px !important;
+        font-size: 0.85rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .order-status-buttons {
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+
+    .status-button {
+        width: 100% !important;
+        max-width: 250px !important;
+        margin: 0 auto !important;
+    }
+
+    .order-item {
+        padding: 10px !important;
+    }
+
+    .product-image {
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    .item-info h3 {
+        font-size: 0.8rem !important;
+    }
+
+    .price, .quantity {
+        font-size: 0.75rem !important;
+    }
 }
