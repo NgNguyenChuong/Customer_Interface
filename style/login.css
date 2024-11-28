@@ -548,3 +548,22 @@ a.btn-goback:hover {
 .success {
     background: transparent;
 }
+
+.signup-active {
+    color: #ffffff !important;
+}
+
+.signup-active a {
+    color: #ffffff !important;
+    text-decoration: none;
+    border-bottom: solid 2px #FAD4AE !important;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.signin-inactive a {
+    color: rgba(255,255,255,.3);
+    text-decoration: none;
+    border-bottom: none;
+    cursor: pointer;
+}
