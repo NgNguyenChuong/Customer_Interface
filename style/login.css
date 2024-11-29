@@ -110,10 +110,12 @@ li {
   padding-right: 37px;
   padding-top: 55px;
   position: relative;
-  top: -375px;
+  top: -450px;
   left: 400px;
-  opacity: 0;
+  opacity: 1;
   transition: all .5s ease;
+  z-index: 1;
+ 
 }
 
 .form-signup-left {
@@ -304,6 +306,9 @@ label {
 	border-radius: 20px;
   margin-top: 10px;
   background-color: #4a8a7d;
+  cursor: pointer;
+  transition: background-color .5s ease;
+  text-decoration: none;
 }
 
 .btn-signin {
@@ -314,6 +319,8 @@ label {
 	border: none;
 	border-radius: 20px;
   margin-top: -8px;
+  color: white;
+  text-decoration: none;
 }
 
 .btn-animate {
@@ -566,4 +573,57 @@ a.btn-goback:hover {
     text-decoration: none;
     border-bottom: none;
     cursor: pointer;
+}
+
+.no-account {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.switch-to-signup {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color .3s;
+}
+
+.switch-to-signup:hover {
+    color: #FAD4AE;
+    cursor: pointer;
+}
+
+.btn-signup:hover {
+    background-color: #2d4f47;
+}
+
+/* Style cho link đăng xuất */
+a.btn-signout {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+/* Hiệu ứng khi hover */
+a.btn-signout:hover {
+    color: #ff4444; /* Màu đỏ khi hover */
+}
+
+/* Hiệu ứng khi click */
+a.btn-signout:active {
+    color: #cc0000; /* Màu đỏ đậm hơn khi click */
+}
+
+/* Style cho icon */
+a.btn-signout i {
+    margin-right: 5px;
+    transition: color 0.3s ease;
+}
+
+/* Hiệu ứng hover cho icon */
+a.btn-signout:hover i {
+    color: #ff4444;
 }
