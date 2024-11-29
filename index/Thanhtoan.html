@@ -85,39 +85,98 @@
 
                     <div class="buttons">
                         <a href="./Gio_hang.html" class="back-btn">Giỏ hàng</a>
-                        <button type="submit" class="next-btn">Tiếp tục đến phương thức thanh toán</button>
+                        <button type="button" class="next-btn" onclick="redirectToPayment()">Tiếp tục đến phương thức thanh toán</button>
                     </div>
                 </form>
             </div>
 
-            <div class="cart-summary">
-                <div class="cart-items">
-                    <!-- Cart items will be inserted here by JavaScript -->
-                </div>
-                
-                <div class="discount-code">
-                    <input type="text" placeholder="Mã giảm giá">
-                    <button type="button">Sử dụng</button>
-                </div>
-
-                <div class="cart-totals">
-                    <div class="subtotal">
-                        <span>Tạm tính</span>
-                        <span>0₫</span>
-                    </div>
-                    <div class="shipping">
-                        <span>Phí vận chuyển</span>
-                        <span>—</span>
-                    </div>
-                    <div class="total">
-                        <span>Tổng cộng</span>
-                        <span>0₫</span>
+                <div class="main-content">
+                    <div class="cart-summary">
+                        <div class="cart-items">
+                            <!-- Cart items will be inserted here by JavaScript -->
+                        </div>
+                        
+                        <div class="discount-code">
+                            <input type="text" placeholder="Mã giảm giá">
+                            <button type="button">Sử dụng</button>
+                        </div>
+        
+                        <div class="cart-totals">
+                            <div class="subtotal">
+                                <span>Tạm tính</span>
+                                <span>0₫</span>
+                            </div>
+                            <div class="shipping">
+                                <span>Phí vận chuyển</span>
+                                <span>—</span>
+                            </div>
+                            <div class="total">
+                                <span>Tổng cộng</span>
+                                <span>0₫</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
     </div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            const cartItemsContainer = document.querySelector('.cart-items');
+            const subtotalElement = document.querySelector('.subtotal span:last-child');
+            const totalElement = document.querySelector('.total span:last-child');
+    
+            let subtotal = 0;
+    
+            cartItems.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                subtotal += itemTotal;
+    
+                const itemElement = document.createElement('div');
+                itemElement.classList.add('cart-item');
+                itemElement.innerHTML = `
+                    <div class="cart-item-image">
+                        <img src="${item.image}" alt="${item.name}">
+                    </div>
+                    <div class="cart-item-details">
+                        <span class="cart-item-name">${item.name}</span><br>
+                        <span class="cart-item-quantity">Số lượng: ${item.quantity}</span><br>
+                        <span class="cart-item-price">${itemTotal.toLocaleString('vi-VN')}₫</span>
+                    </div>
+                `;
+                cartItemsContainer.appendChild(itemElement);
+            });
+    
+            subtotalElement.textContent = `${subtotal.toLocaleString('vi-VN')}₫`;
+            totalElement.textContent = `${subtotal.toLocaleString('vi-VN')}₫`;
+        });
+        </script>
     <script src="../js/function.js"></script>
+    <script>
+    function redirectToPayment() {
+        // Lưu thông tin giao hàng vào localStorage nếu cần
+        const formData = {
+            name: document.querySelector('input[placeholder="Họ và tên"]').value,
+            email: document.querySelector('input[placeholder="Email"]').value,
+            phone: document.querySelector('input[placeholder="Số điện thoại"]').value,
+            address: document.querySelector('input[placeholder="Địa chỉ"]').value,
+            city: document.querySelector('#city').value,
+            district: document.querySelector('#district').value,
+            ward: document.querySelector('#ward').value
+        };
+        
+        localStorage.setItem('shippingInfo', JSON.stringify(formData));
+        
+        // Chuyển hướng đến trang thanh toán
+        window.location.href = './trangthanhtoan.html';
+    }
+
+    // Ngăn chặn form submit mặc định
+    document.querySelector('.shipping-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        redirectToPayment();
+    });
+    </script>
 </body>
 </html>

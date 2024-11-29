@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organica - Phương thức thanh toán</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/payment1.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Organica</h1>
+        <div class="breadcrumb">
+            <a href="#">Giỏ hàng</a> &gt;
+            <a href="#">Thông tin giao hàng</a> &gt;
+            <span>Phương thức thanh toán</span>
+        </div>
+
+        <div class="main-content">
+            <div class="payment-section">
+                <div class="shipping-method">
+                    <h3>Phương thức vận chuyển</h3>
+                    <div class="shipping-box">
+                        <svg class="box-icon" width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 7H21V17H3V7Z" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3 7L12 12L21 7" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <p>Không tìm thấy phương thức vận chuyển phù hợp.</p>
+                    </div>
+                </div>
+
+                <div class="payment-method">
+                    <h3>Phương thức thanh toán</h3>
+                    <div class="payment-options">
+                        <label class="payment-option">
+                            <input type="radio" name="payment">
+                            <img src="../img/thanhtoan.svg" alt="Bank">
+                            <span>Chuyển khoản</span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment" checked>
+                            <img src="../img/thanhtoan.svg" alt="Cash">
+                            <span>Tiền mặt</span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment">
+                            <img src="../img/thanhtoan.svg" alt="Visa">
+                            <span>Visa/Master</span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment">
+                            <img src="../img/thanhtoan.svg" alt="VNPay">
+                            <span>Vnpay</span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment">
+                            <img src="../img/thanhtoan.svg" alt="ZaloPay">
+                            <span>ZaloPay</span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment">
+                            <img src="../img/momo.svg" alt="MoMo">
+                            <span>Ví MoMo</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <a href="./Gio_hang.html" class="back-button">Giỏ hàng</a>
+                    <button class="complete-order" onclick="showOrderSuccess()">Hoàn tất đơn hàng</button>
+                </div>
+            </div>
+
+            <div class="cart-summary">
+                <div class="cart-items">
+                    <!-- Cart items will be inserted here by JavaScript -->
+                </div>
+                
+                <div class="discount-code">
+                    <input type="text" placeholder="Mã giảm giá">
+                    <button type="button">Sử dụng</button>
+                </div>
+
+                <div class="cart-totals">
+                    <div class="subtotal">
+                        <span>Tạm tính</span>
+                        <span class="price">0₫</span>
+                    </div>
+                    <div class="shipping">
+                        <span>Phí vận chuyển</span>
+                        <span>—</span>
+                    </div>
+                    <div class="total">
+                        <span>Tổng cộng</span>
+                        <span class="price">0₫</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="success-icon">✓</div>
+            <h2>Đặt hàng thành công!</h2>
+            <p>Quý khách đã đặt hàng thành công. Cảm ơn quý khách đã tin tưởng và sử dụng dịch vụ của chúng tôi!</p>
+            <button onclick="closeModal()">Đóng</button>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        const cartItemsContainer = document.querySelector('.cart-items');
+        const subtotalElement = document.querySelector('.subtotal span:last-child');
+        const totalElement = document.querySelector('.total span:last-child');
+
+        let subtotal = 0;
+
+        cartItems.forEach(item => {
+            const itemTotal = item.price * item.quantity;
+            subtotal += itemTotal;
+
+            const itemElement = document.createElement('div');
+            itemElement.classList.add('cart-item');
+            itemElement.innerHTML = `
+                <div class="cart-item-image">
+                    <img src="${item.image}" alt="${item.name}">
+                </div>
+                <div class="cart-item-details">
+                    <span class="cart-item-name">${item.name}</span><br>
+                    <span class="cart-item-quantity">Số lượng: ${item.quantity}</span><br>
+                    <span class="cart-item-price">${itemTotal.toLocaleString('vi-VN')}₫</span>
+                </div>
+            `;
+            cartItemsContainer.appendChild(itemElement);
+        });
+
+        subtotalElement.textContent = `${subtotal.toLocaleString('vi-VN')}₫`;
+        totalElement.textContent = `${subtotal.toLocaleString('vi-VN')}₫`;
+    });
+
+    function showOrderSuccess() {
+        const modal = document.getElementById('successModal');
+        modal.style.display = 'flex';
+        
+        // Xóa giỏ hàng
+        localStorage.removeItem('cartItems');
+    }
+
+    function closeModal() {
+        const modal = document.getElementById('successModal');
+        modal.style.display = 'none';
+        
+        // Chuyển về trang chủ - điều chỉnh đường dẫn
+        window.location.href = '../index/homePage.html';
+    }
+
+    // Đóng modal khi click bên ngoài
+    window.onclick = function(event) {
+        const modal = document.getElementById('successModal');
+        if (event.target == modal) {
+            closeModal();
+        }
+    }
+
+    // Thêm sự kiện cho nút hoàn tất đơn hàng
+    document.querySelector('.complete-order').addEventListener('click', showOrderSuccess);
+    </script>
+</body>
+</html>

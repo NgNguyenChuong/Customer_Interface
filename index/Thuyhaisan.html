@@ -326,9 +326,8 @@ function addToCart(productName, price) {
         // Nếu sản phẩm chưa tồn tại, thêm mới
         cartItems.push({
             name: productName,
-            price: price.toLocaleString('vi-VN'),
+            price: price, // Đảm bảo giá tiền là số
             quantity: 1,
-            // Lấy đường dẫn ảnh từ thẻ img tương ứng
             image: document.querySelector(`img[alt="${productName}"]`).src
         });
     }
@@ -338,7 +337,7 @@ function addToCart(productName, price) {
     
     // Hiển thị thông báo đã thêm vào giỏ hàng
     alert('Đã thêm sản phẩm vào giỏ hàng!');
-}
+    }
 </script>
 <script src="../icon/js/bootstrap.bundle.min.js"></script>
 

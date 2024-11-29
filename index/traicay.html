@@ -320,43 +320,32 @@
     </div>
 
     <script>
-        function addToCart(productName, price) {
-            // Lấy giỏ hàng từ localStorage
-            let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-            
-            // Lấy đường dẫn ảnh
-            const imgElement = document.querySelector(`img[alt="${productName}"]`);
-            const imageUrl = imgElement ? imgElement.src : '';
-            
-            // Tìm sản phẩm trong giỏ hàng
-            let existingProduct = cartItems.find(item => item.name === productName);
-            
-            if (existingProduct) {
-                // Nếu sản phẩm đã tồn tại, tăng số lượng
-                existingProduct.quantity += 1;
-            } else {
-                // Nếu sản phẩm chưa tồn tại, thêm mới
-                cartItems.push({
-                    name: productName,
-                    price: price + 'đ',
-                    image: imageUrl,
-                    quantity: 1
-                });
-            }
-            
-            // Lưu vào localStorage
-            localStorage.setItem('cartItems', JSON.stringify(cartItems));
-            
-            // Cập nhật số lượng trên icon giỏ hàng
-            const cartCount = document.querySelector('.cart-count');
-            if (cartCount) {
-                cartCount.textContent = cartItems.length;
-                cartCount.style.display = 'block';
-            }
-            
-            // Hiển thị thông báo
-            alert('Đã thêm sản phẩm vào giỏ hàng!');
+    function addToCart(productName, price) {
+        // Lấy giỏ hàng từ localStorage hoặc tạo mới
+        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        
+        // Tìm sản phẩm trong giỏ hàng
+        let existingProduct = cartItems.find(item => item.name === productName);
+        
+        if (existingProduct) {
+            // Nếu sản phẩm đã tồn tại, tăng số lượng
+            existingProduct.quantity += 1;
+        } else {
+            // Nếu sản phẩm chưa tồn tại, thêm mới
+            cartItems.push({
+                name: productName,
+                price: price, // Đảm bảo giá tiền là số
+                quantity: 1,
+                image: document.querySelector(`img[alt="${productName}"]`).src
+            });
         }
+        
+        // Lưu giỏ hàng vào localStorage
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        
+        // Hiển thị thông báo đã thêm vào giỏ hàng
+        alert('Đã thêm sản phẩm vào giỏ hàng!');
+    }
     </script>
 <script src="../icon/js/bootstrap.bundle.min.js"></script>
 

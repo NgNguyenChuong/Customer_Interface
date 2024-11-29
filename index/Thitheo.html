@@ -324,9 +324,8 @@ function addToCart(productName, price) {
         // Nếu sản phẩm chưa tồn tại, thêm mới
         cartItems.push({
             name: productName,
-            price: price.toLocaleString('vi-VN'),
+            price: price, // Đảm bảo giá tiền là số
             quantity: 1,
-            // Lấy đường dẫn ảnh từ thẻ img tương ứng
             image: document.querySelector(`img[alt="${productName}"]`).src
         });
     }
