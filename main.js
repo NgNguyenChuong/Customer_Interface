@@ -4,35 +4,37 @@ function signIn() {
 
   if (!username && !password) {
     alert("Vui lòng nhập tên đăng nhập và mật khẩu!");
-    return;
+    return false;
   }
   
   if (!username) {
     alert("Vui lòng nhập tên đăng nhập!");
-    return;
+    return false;
   }
   
   if (!password) {
     alert("Vui lòng nhập mật khẩu!");
-    return;
+    return false;
+  }
+
+  if (username.length < 3) {
+    alert("Tên đăng nhập phải có ít nhất 3 ký tự!");
+    return false;
   }
 
   if (!/^[a-zA-Z0-9_]+$/.test(username)) {
     alert("Tên đăng nhập chỉ được chứa chữ cái, số và dấu gạch dưới!");
-    return;
+    return false;
   }
-  if (username.length < 3) {
-    alert("Tên đăng nhập phải có ít nhất 3 ký tự!");
-    return;
-  }
+
   if (password.length < 6) {
     alert("Mật khẩu phải có ít nhất 6 ký tự!");
-    return;
+    return false;
   }
 
   if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)/.test(password)) {
     alert("Mật khẩu phải chứa ít nhất một chữ hoa, một chữ thường và một số!");
-    return;
+    return false;
   }
 
   var user = {
@@ -104,6 +106,8 @@ function signIn() {
   setTimeout(() => {
     window.location.href = 'homePage.html';
   }, 2000);
+
+  return true;
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -251,17 +255,15 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Kiểm tra URL có tham số form=signup không
+
     const urlParams = new URLSearchParams(window.location.search);
     const formType = urlParams.get('form');
     
     if (formType === 'signup') {
-        // Tự động click vào nút đăng ký
+
         const signupLink = document.querySelector('.signup-inactive');
         if (signupLink) {
             signupLink.click();
         }
     }
-    
-    // ... giữ nguyên code xử lý chuyển đổi form hiện tại ...
 });
