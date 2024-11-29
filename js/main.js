@@ -1,11 +1,12 @@
 function signIn(e) {
   var email = document.getElementById("email").value;
   var password = document.getElementById("password").value;
-  
+  //var username= document.getElementById("username").value
   if (email && password) {
     var user = {
       email: email,
       password: password,
+      //username: username,
     };
     var json = JSON.stringify(user);
     console.log(json);
@@ -23,9 +24,9 @@ document.addEventListener("DOMContentLoaded", function () {
   var isLogin = JSON.parse(localStorage.getItem("isLogin")) || false;
 
   if (isLogin === true) {
-    document.getElementById("logo").style.display = "none";
+    document.getElementById('logo').style.display = "none";
   } else {
-    document.getElementById("logo").style.display = "block";
+    document.getElementById('logo').style.display = "block";
   }
 });
 
