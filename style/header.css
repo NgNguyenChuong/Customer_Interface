@@ -153,12 +153,13 @@ body {
     grid-gap: 10px;
 }
 .product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
     border: 1px solid #ddd;
     border-radius: 5px;
-    padding: 10px;
-    text-align: center;
-    width: 100%;
-    
 }
 .product-card a{
     text-decoration: none;
@@ -204,13 +205,26 @@ body {
 }
 
 .product-card .buy-button {
-    display: block;
-    background-color: #4CAF50;
+    display: inline-block;
+    margin: 10px 0;
+    border: none;
+    background-color: #6AA173;
     color: white;
-    padding: 8px 16px;
-    text-decoration: none;
+    padding: 8px 20px;
     border-radius: 5px;
-    margin-top: 10px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.buy-button:hover {
+    background-color: #35635A;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .menu-item {
@@ -1367,5 +1381,14 @@ body {
 @media screen and (max-width: 375px) {
     .middle-section {
         height: 50px;
+    }
+}
+
+/* Thêm responsive cho button */
+@media screen and (max-width: 768px) {
+    .buy-button {
+        padding: 6px 15px;
+        font-size: 14px;
+        width: 90%;
     }
 }
