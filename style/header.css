@@ -5,9 +5,7 @@ Reset CSS
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-}
+
 
 .container-header {
     display: flex;
@@ -1001,8 +999,8 @@ body {
     margin-right: 15px;
 }
 
-Cập nhật media queries
-@media screen and (min-width: 1023px) {
+/* Cập nhật media queries */
+@media screen and (min-width: 1024px) {
     /* Styles cho PC */
     .container-header {
         height: 100px;

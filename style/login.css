@@ -1,4 +1,4 @@
-html, body * { box-sizing: border-box; font-family: Arial, sans-serif; }
+html, body * { box-sizing: border-box; font-family: 'Roboto', Arial; }
 
 .container-login-form {
   width: 100%;
