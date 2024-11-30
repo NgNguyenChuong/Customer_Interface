@@ -210,14 +210,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 function confirmSignOut() {
+    console.log("Đang thực hiện đăng xuất...");
     if (confirm("Bạn có chắc chắn muốn đăng xuất?")) {
-        // Xóa thông tin đăng nhập
+        console.log("Người dùng đã xác nhận đăng xuất");
         localStorage.removeItem("isLogin");
         localStorage.removeItem("currentUser");
-        // Chuyển hướng về trang login
-        window.location.href = 'login.html';
+        console.log("Đã xóa thông tin đăng nhập");
+        
+        // Log đường dẫn hiện tại
+        console.log("Current path:", window.location.pathname);
+        
+        window.location.href = './index/login.html';
         return false;
     }
+    console.log("Người dùng đã hủy đăng xuất");
     return false;
 }
 
@@ -266,4 +272,32 @@ document.addEventListener('DOMContentLoaded', function() {
             signupLink.click();
         }
     }
+});
+
+$(document).ready(function() {
+    try {
+        // Code jQuery hiện tại
+        console.log("jQuery loaded successfully");
+    } catch (error) {
+        console.error("jQuery error:", error);
+    }
+});
+
+console.log("Document ready");
+$(document).ready(function() {
+    console.log("jQuery ready");
+    
+    // Log khi click vào các nút
+    $(".links li").click(function() {
+        console.log("Link clicked:", $(this).text());
+    });
+    
+    // Log trạng thái form
+    function logFormState() {
+        console.log("Form signin visible:", $(".form-signin").is(":visible"));
+        console.log("Form signup visible:", $(".form-signup").is(":visible"));
+    }
+    
+    // Log mỗi 2 giây
+    setInterval(logFormState, 2000);
 });
