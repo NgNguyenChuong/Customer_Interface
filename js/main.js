@@ -179,7 +179,7 @@ function confirmSignOut() {
         localStorage.removeItem("isLogin");
         localStorage.removeItem("currentUser");
         // Chuyển hướng về trang chủ
-        window.location.href = '../index.html';
+        window.location.href = './index/login.html';
         return false;
     }
     return false;
