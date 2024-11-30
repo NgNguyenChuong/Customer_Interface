@@ -121,10 +121,11 @@ document.addEventListener("DOMContentLoaded", function () {
             loginElement.style.display = "none";
         }
         
-        // Xử lý các nút trong login-2
+        // Hiển thị login-2
         var login2Element = document.getElementById('login-2');
         if (login2Element) {
-            // Tìm tất cả các nút đăng nhập và đăng ký trong login-2
+            login2Element.style.display = "block";
+            // Xử lý các nút trong login-2
             var loginButtons = login2Element.querySelectorAll('.custom-item');
             loginButtons.forEach(function(button) {
                 button.onclick = function(e) {
@@ -266,4 +267,23 @@ document.addEventListener('DOMContentLoaded', function() {
             signupLink.click();
         }
     }
+});
+
+// Thêm hàm kiểm tra đăng nhập cho các trang khác
+function checkLogin() {
+  var isLogin = JSON.parse(localStorage.getItem("isLogin")) || false;
+  if (!isLogin) {
+    alert("Vui lòng đăng nhập để truy cập trang này!");
+    window.location.href = 'login.html';
+    return false;
+  }
+  return true;
+}
+
+// Thêm event listener để kiểm tra đăng nhập khi load trang
+document.addEventListener("DOMContentLoaded", function() {
+  // Không kiểm tra nếu đang ở trang login.html
+  if (!window.location.href.includes('login.html')) {
+    checkLogin();
+  }
 });
