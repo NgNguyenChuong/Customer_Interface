@@ -121,19 +121,6 @@ document.addEventListener("DOMContentLoaded", function () {
             loginElement.style.display = "none";
         }
         
-        // Xử lý các nút trong login-2
-        var login2Element = document.getElementById('login-2');
-        if (login2Element) {
-            // Tìm tất cả các nút đăng nhập và đăng ký trong login-2
-            var loginButtons = login2Element.querySelectorAll('.custom-item');
-            loginButtons.forEach(function(button) {
-                button.onclick = function(e) {
-                    e.preventDefault();
-                    alert("Vui lòng đăng xuất trước khi thực hiện thao tác này!");
-                    return false;
-                };
-            });
-        }
 
         document.getElementById('login-now').innerHTML = `Xin chào, ${localStorage.getItem("currentUser")}`;
     } else {
@@ -215,7 +202,7 @@ function confirmSignOut() {
         localStorage.removeItem("isLogin");
         localStorage.removeItem("currentUser");
         // Chuyển hướng về trang login
-        window.location.href = 'login.html';
+        window.location.href = './index/login.html';
         return false;
     }
     return false;
@@ -241,7 +228,7 @@ document.addEventListener('DOMContentLoaded', function() {
         signupLink.classList.add('signup-active');
     });
 
-    // Xử lý click vào nút đăng nhập
+    // Xử l�� click vào nút đăng nhập
     signinLink.addEventListener('click', function(e) {
         e.preventDefault();
         signinForm.classList.remove('form-signin-left');
@@ -255,7 +242,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-
     const urlParams = new URLSearchParams(window.location.search);
     const formType = urlParams.get('form');
     
@@ -267,3 +253,38 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
+function addToCart(productName, price) {
+  // Kiểm tra trạng thái đăng nhập
+  var isLogin = JSON.parse(localStorage.getItem("isLogin")) || false;
+  
+  if (!isLogin) {
+      if (confirm("Bạn cần đăng nhập để mua hàng! Bạn có muốn đăng nhập ngay?")) {
+          window.location.href = './index/login.html';
+      }
+      return;
+  }
+  
+  // Nếu đã đăng nhập, tiếp tục xử lý thêm vào giỏ hàng
+  let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+  
+  let existingProduct = cartItems.find(item => item.name === productName);
+  
+  let productImage = document.querySelector(`img[alt="${productName}"]`);
+  let imageSrc = productImage ? productImage.src : '';
+  
+  if (existingProduct) {
+      existingProduct.quantity += 1;
+  } else {
+      cartItems.push({
+          name: productName,
+          price: price,
+          quantity: 1,
+          image: imageSrc
+      });
+  }
+  
+  localStorage.setItem('cartItems', JSON.stringify(cartItems));
+  
+  alert('Đã thêm sản phẩm vào giỏ hàng!');
+}
