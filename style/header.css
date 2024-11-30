@@ -630,9 +630,7 @@ body {
         justify-content: space-between;
     }
     
-    .logo {
-        height: 300px !important;
-    }
+
 
     .left-section {
         margin-right: 15px;
@@ -644,9 +642,9 @@ body {
         gap: 10px;
     }
 
-    .middle-section {
-        flex: 0 1 auto;
-    }
+    /* .middle-section {
+      
+    } */
 
     .dropdown-menu {
         margin-left: 20px;
@@ -685,11 +683,15 @@ body {
     .history {
         font-size: 12px;
         height: 25px;
-        padding: 0 10px;
+        padding: 0 12px;
+        margin-right: 10px;
     }
 
     .menu-item {
         font-size: 14px;
+    }
+    .dropdown {
+        margin-right: 23px;
     }
 
     /* Điều chỉnh dropdown menu */
@@ -707,9 +709,9 @@ body {
         padding: 8px 12px;
         font-size: 14px;
     }
-    .fa-user-circle {
-        margin-right: 10px;
-    }
+  .icon i {
+    font-size: 45px;
+  }
 }
 
 /* Tablet (768px - 1023px) */
@@ -760,6 +762,7 @@ body {
         order: 2;
         position: static;
         transform: none;
+        margin:auto;
     }
     
     .logo {
@@ -794,8 +797,7 @@ body {
     .search-container,
     .history,
     .left-section,
-    .dropdown-menu,
-    .dropdown-toggle {
+    .dropdown-menu{
         display: none;
     }
 }
@@ -842,7 +844,7 @@ body {
     }
     
     .logo {
-        height: 50px;
+        height: 70px;
     }
 
     /* Right section */
@@ -1023,16 +1025,19 @@ Cập nhật media queries
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 20px;
+        padding: 10px 35px;
         max-width: 1500px;
     }
 
     .left-section {
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 0;
         flex-shrink: 0;
-        margin-right: 20px;
+        margin-left: -42px;
+    }
+    .middle-section {
+     width: 180px;
     }
 
     .right-section {
@@ -1042,17 +1047,8 @@ Cập nhật media queries
         flex-shrink: 0;
         margin-right: 40px;
     }
-
-    .middle-section {
-        flex: 0 1 auto;
-    }
-
     .logo {
-        height: 80px;
-    }
-
-    .search-bar {
-        width: 200px;
+        height: 100px;
     }
 
     .menu-btn,
@@ -1061,7 +1057,7 @@ Cập nhật media queries
     }
 
     .menu-item {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .cart {
@@ -1081,7 +1077,12 @@ Cập nhật media queries
         background: none;
         border: none;
     }
-
+    .history {
+        margin-right: 10px;
+    }
+    .icon i {
+        font-size: 45px;
+    }
 
     .custom-dropdown {
         position: absolute;
@@ -1126,10 +1127,6 @@ Cập nhật media queries
         gap: 15px;
     }
 
-    .logo {
-        height: 70px;
-    }
-
     .left-section {
         display: none;
     }
@@ -1146,7 +1143,7 @@ Cập nhật media queries
     }
 
     .search-bar {
-        width: 180px;
+        width: 240px;
     }
 
     .cart {
@@ -1170,10 +1167,11 @@ Cập nhật media queries
     }
     .dropdown-toggle i {
         margin-left: 5px;
-        font-size: 35px;
-       
-    }
 
+    }
+    .icon i {
+        font-size: 40px;
+      }
 }
 
 /* Mobile (<768px) */
@@ -1192,11 +1190,6 @@ Cập nhật media queries
         display: block;
         font-size: 24px;
     }
-
-    .logo {
-        height: 70px;
-    }
-
     .right-section {
         display: flex;
         align-items: center;
@@ -1221,10 +1214,9 @@ Cập nhật media queries
         display: block;
         font-size: 20px;
     }
-    .dropdown-toggle i {
-        font-size: 33px;
-    }
-
+    .icon i {
+        font-size: 35px;
+      }
 }
 
 .cart-link {
@@ -1315,7 +1307,7 @@ Cập nhật media queries
 .container > div:first-child {
     width: 100%;
     height: auto;
-    margin-top: 120px; /* Để tránh bị che bởi header */
+    margin-top: 100px; /* Để tránh bị che bởi header */
     overflow: hidden;
 }
 
@@ -1330,16 +1322,9 @@ Cập nhật media queries
 /* Responsive cho các màn hình nhỏ hơn */
 @media screen and (max-width: 1024px) {
     .container > div:first-child img {
-        height: 500px;
+        height: auto;
     }
 }
-
-@media screen and (max-width: 768px) {
-    .container > div:first-child img {
-        height: 400px;
-    }
-}
-
 
 /* Thêm responsive cho button */
 @media screen and (max-width: 768px) {

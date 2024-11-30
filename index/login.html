@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="../style/header.css">
+    <link rel="stylesheet" href="../icon/css/all.css">
+    <link rel="stylesheet" href="../style/generall.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style/login.css">
+    <link rel="stylesheet" href="../icon/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../icon/css/all.min.css">    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/main.js"></script>
+
+</head>
+
+
+<body style="height: 10000px;">
+    <div class="container-header">
+        <div class="header">
+            <div class="menu-btn">
+                <i class="fa-solid fa-list" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                    aria-controls="offcanvasRight"></i>
+                <!-- <button  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button> -->
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                    aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <i class="fa-regular fa-user" id="offcanvasRightLabel"></i>
+                        <h5 style="margin-top: 10px; margin-left: 10px;"> Người dùng 1 
+                         </h5>
+                         <button href="#" style="border-style: solid; background-color: rgb(103, 103, 199); font-size: 13px; color:white; border-radius: 20px; height: 40px; width: 140px;margin-left: 6px; margin-top: 10px;"><b>Chưa đăng nhập</b></button>
+                       
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div class="store">
+                            <a href="#" class="menu-item">CỬA HÀNG</a>
+                            </div>
+                        <div class="discount">
+                            <a href="./Khuyenmai.html" class="dropdown-toggle">KHUYẾN MÃI </a>
+                        </div>
+
+                        <div class="dropdown-1">
+                            <a href="./Sanpham.html" class="dropdown-toggle">
+                                SẢN PHẨM
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                            <div class="dropdown-menu">
+
+                                <a href="./raucuqua.html"> Rau củ quả
+
+
+                                </a>
+                                <a href="./traicay.html">Trái cây</a>
+                                <div class="dropdown-menu1">
+                                    <a href="#">Thịt & Thủy hải sản <i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="dropdown-menu2">
+                                        <a href="./Thitheo.html">Thịt heo</a>
+                                        <a href="./Thitbo.html">Thịt bò</a>
+                                        <a href="./Giacam_trung.html">Gia cầm & Trứng</a>
+                                        <a href="./Thuyhaisan.html">Thủy hải sản</a>
+                                    </div>
+                                </div>
+                                <div class="dropdown-menu3">
+                                    <a href="#">Thức uống <i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="dropdown-menu4">
+                                        <a href="./Travacaphe.html">Trà và Cà phê</a>
+                                        <a href="./Sua.html">Sữa</a>
+                                        <a href="./NuocEpSinhTo.html">Nước ép & Sinh tố</a>
+                                        <a href="./Thucuongkhac.html">Thức uống khác</a>
+                                    </div>
+                                </div>
+                                <div class="dropdown-menu5">
+                                    <a href="#">Sản phẩm chế biến <i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="dropdown-menu6">
+                                        <a href="./BunMiSoi.html">Bún, Mỳ sợi các loại </a>
+                                        <a href="./Thuc_an_nhe.html">Thức ăn nhẹ</a>
+                                        <a href="./Thucphamdonglanh.html">Thực phẩm đông lạnh</a>
+                                    </div>
+                                </div>
+                                <a href="./Phithucpham.html">Phi thực phẩm</a>
+                            </div>
+                        </div>
+
+                    
+                    </div>
+                </div>
+            </div>
+
+            <div class="left-section">
+                <a href="./Khuyenmai.html" class="dropdown-toggle">KHUYẾN MÃI </a>
+                <div class="dropdown">
+                    <a href="./Sanpham.html" class="dropdown-toggle">
+                        SẢN PHẨM
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="./raucuqua.html"> Rau củ quả
+
+                        </a>
+                        <a href="./traicay.html">Trái cây</a>
+                        <div class="dropdown-menu1">
+                            <a href="#">Thịt & Thủy hải sản <i class="fa-solid fa-chevron-right"></i></a>
+                            <div class="dropdown-menu2">
+                                <a href="./Thitheo.html">Thịt heo</a>
+                                <a href="./Thitbo.html">Thịt bò</a>
+                                <a href="./Giacam_trung.html">Gia cầm & Trứng</a>
+                                <a href="./Thuyhaisan.html">Thủy hải sản</a>
+                            </div>
+                        </div>
+                        <div class="dropdown-menu3">
+                            <a href="#">Thức uống <i class="fa-solid fa-chevron-right"></i></a>
+                            <div class="dropdown-menu4">
+                                <a href="./Travacaphe.html">Trà và Cà phê</a>
+                                <a href="./Sua.html">Sữa</a>
+                                <a href="./Nuocep_sinhto.html">Nước ép & Sinh tố</a>
+                                <a href="./Thucuongkhac.html">Thức uống khác</a>
+                            </div>
+                        </div>
+                        <div class="dropdown-menu5">
+                            <a href="#">Sản phẩm chế biến <i class="fa-solid fa-chevron-right"></i></a>
+                            <div class="dropdown-menu6">
+                                <a href="./BunMiSoi.html">Bún, Mỳ sợi các loại </a>
+                                <a href="./Thuc_an_nhe.html">Thức ăn nhẹ</a>
+                                <a href="./Thucphamdonglanh.html">Thực phẩm đông lạnh</a>
+                            </div>
+                        </div>
+                        <a href="./Phithucpham.html">Phi thực phẩm</a>
+                    </div>
+                </div>
+                <a href="#" class="menu-item">CỬA HÀNG</a>
+            </div>
+            <div class="middle-section">
+                <a href="../index.html"><img class="logo" src="../img/logoorganic.webp"></a>
+            </div>
+            <div class="right-section">
+                <button class="history">
+                    <a href="./Lich_su.html" style="text-decoration: none; color: black;">Lịch sử mua hàng</a>
+                </button>
+                <div class="search-container">
+                    <input class="search-bar" type="text" placeholder="Gõ từ khóa sản phẩm bạn muốn tìm">
+                    <div class="search-icon">
+                        <i class="fa-solid fa-magnifying-glass" style="color: #35635A;"></i>
+                    </div>
+                </div>
+                <div class="cart-user-group">
+                    <a href="./Gio_hang.html" class="cart-link">
+                        <button class="cart">
+                            <i class="fa-solid fa-cart-shopping" style="color: white;"></i>
+                        </button>
+                    </a>
+                    <div class="user-dropdown">
+                        <button class="btn dropdown-toggle user-icon icon" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user-circle" ></i>
+                        </button>
+                        
+                        <ul class="dropdown-menu dropdown-menu-end custom-dropdown">
+                            <li><a class="dropdown-item custom-item" href="#"><i class="fas fa-sign-in-alt"></i> Đăng nhập</a></li>
+                            <li><a class="dropdown-item custom-item" href="#"><i class="fas fa-user-plus"></i> Đăng ký</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item custom-item" href="./Lich_su.html"><i class="fas fa-history"></i> Lịch sử đơn hàng</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="frame">
+            <div class="nav">
+                <ul class="links">
+                    <li class="signin-active"><a class="btn">Đăng nhập</a></li>
+                    <li class="signup-inactive"><a class="btn">Đăng ký</a></li>
+                </ul>
+            </div>
+            <div ng-app ng-init="checked = false">
+                <form class="form-signin" action="" method="post" name="form">
+                    <label id="username" for="username">Tên đăng nhập</label>
+                    <input class="form-styling" type="text" name="username" />
+                    <label id="password" for="password">Mật khẩu</label>
+                    <input class="form-styling" type="password" name="password" />
+                    <input type="checkbox" id="checkbox" />
+                    <label for="checkbox"><span class="ui"></span>Duy trì đăng nhập</label>
+                    <div class="btn-animate">
+                        <a class="btn-signin" onclick="signIn()">Đăng nhập</a>
+                    </div>
+                    <div style="margin-top: 75px; text-align: center; color:white;">
+                        <p>Bạn chưa có tài khoản? <a href="./login.html?form=signup" style="color:aqua;">Đăng ký</a></p>
+                        <p style="margin-top: 10px;">
+                            <a href="#" style="color:aqua;">Quên mật khẩu?</a>
+                        </p>
+                    </div>
+                </form>
+
+                <form class="form-signup" action="" method="post" name="form" >
+                    <label id="fullname" for="fullname">Họ và tên</label>
+                    <input class="form-styling" type="text" name="fullname" />
+                    <label id="username" for="username">Tên đăng nhập</label>
+                    <input class="form-styling" type="text" name="username" />
+                    <label id="email" for="email">Email</label>
+                    <input class="form-styling" type="text" name="email" />
+                    <label for="password">Mật khẩu</label>
+                    <input class="form-styling" type="password" name="password" />
+                    <label for="confirmpassword">Xác nhận mật khẩu</label>
+                    <input class="form-styling" type="password" name="confirmpassword" />
+                        <a ng-click="checked = !checked" class="btn-signup" type="button">Đăng ký</a>
+                        <p style="margin-top: 65px; text-align: center; color:white;">Bạn đã có tài khoản? <a href="./login.html?form=signin" style="color:aqua;">Đăng nhập</a></p>
+                </form>
+       
+                <div class="success">
+                    <svg width="270" height="270" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" id="check"
+                        ng-class="checked ? 'checked' : ''">
+                        <path fill="#ffffff" d="M40.61,23.03L26.67,36.97L13.495,23.788c-1.146-1.147-1.359-2.936-0.504-4.314
+                        c3.894-6.28,11.169-10.243,19.283-9.348c9.258,1.021,16.694,8.542,17.622,17.81c1.232,12.295-8.683,22.607-20.849,22.042
+                        c-9.9-0.46-18.128-8.344-18.972-18.218c-0.292-3.416,0.276-6.673,1.51-9.578" />
+                    </svg>
+                    <button class="btn-login-now">Đăng nhập ngay</button>
+                </div>
+            </div>
+
+            <div class="forgot">
+                <a href="#">Quên mật khẩu?</a>
+            </div>
+
+            <div>
+                <div class="cover-photo"></div>
+                <div class="profile-photo"></div>
+                <h1 class="welcome">Chào mừng bạn đến với chúng tôi</h1>
+                <a class="btn-goback" href="homePage.html">Quay lại</a>
+            </div>
+        </div>
+
+        <a id="refresh" value="Refresh" onClick="history.go()">
+            <svg class="refreshicon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25px" height="25px"
+                viewBox="0 0 322.447 322.447" style="enable-background:new 0 0 322.447 322.447;" xml:space="preserve">
+                <path d="M321.832,230.327c-2.133-6.565-9.184-10.154-15.75-8.025l-16.254,5.281C299.785,206.991,305,184.347,305,161.224
+                      c0-84.089-68.41-152.5-152.5-152.5C68.411,8.724,0,77.135,0,161.224s68.411,152.5,152.5,152.5c6.903,0,12.5-5.597,12.5-12.5
+                      c0-6.902-5.597-12.5-12.5-12.5c-70.304,0-127.5-57.195-127.5-127.5c0-70.304,57.196-127.5,127.5-127.5
+                      c70.305,0,127.5,57.196,127.5,127.5c0,19.372-4.371,38.337-12.723,55.568l-5.553-17.096c-2.133-6.564-9.186-10.156-15.75-8.025
+                      c-6.566,2.134-10.16,9.186-8.027,15.751l14.74,45.368c1.715,5.283,6.615,8.642,11.885,8.642c1.279,0,2.582-0.198,3.865-0.614
+                      l45.369-14.738C320.371,243.946,323.965,236.895,321.832,230.327z" />
+            </svg>
+        </a>
+    </div>
+    <div class="header-section">
+        <div class="header-content">
+            <p class="header-text">
+                “ ORGANICA có trang trại rau nhiệt đới đầu tiên tại Việt Nam đạt chứng nhận hữu cơ của Bộ Nông nghiệp Mỹ
+                (USDA) & EU Organic Farming (Liên minh Châu Âu)”
+            </p>
+        </div>
+        <div class="certification-logos">
+            <img src="../img/usda.webp" alt="USDA Organic Certification">
+            <div class="certification-logos2">
+                <img src="../img/la.webp" alt="EU Organic Certification">
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="column khuyen-mai">
+            <h3>KHUYẾN MÃI</h3>
+            <ul>
+                <li>Sản Phẩm</li>
+                <li>Rau củ quả
+                    div
+                </li>
+                <li>Trái cây</li>
+                <li>Thịt & Thủy hải sản</li>
+                <li>Thức uống</li>
+                <li>Sản phẩm chế biến</li>
+                <li>Phi thực phẩm</li>
+            </ul>
+        </div>
+
+        <div class="column ve-organica">
+            <h3>VỀ ORGANICA</h3>
+            <ul>
+                <li>Giới thiệu</li>
+                <li>Tầm nhìn & Sứ mệnh</li>
+                <li>Trang trại hữu cơ</li>
+            </ul>
+        </div>
+
+        <div class="column tro-chuyen">
+            <h3>TRÒ CHUYỆN CÙNG ORGANICA</h3>
+            <ul>
+                <li>Ăn hữu cơ</li>
+                <li>Hiểu hữu cơ</li>
+                <li>Sống hữu cơ</li>
+                <li>Organica Blog</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        function confirmAddProduct() {
+        let confirmAction = confirm("Bạn có chắc chắn muốn thêm sản phẩm này không?");
+        if (confirmAction) {
+            // Thực hiện hành động khi người dùng nhấn "OK"
+            alert("Yêu cầu đã được thực hiện.");
+        } else {
+            // Hành động khi người dùng nhấn "Cancel"
+            alert("Yêu cầu đã bị hủy.");
+        }
+    }
+    function confirmNotAddProduct() {
+        let confirmAction = confirm("Bạn có chắc chắn không muốn thêm sản phẩm này không?");
+        if (confirmAction) {
+            // Thực hiện hành động khi người dùng nhấn "OK"
+            alert("Yêu cầu đã được thực hiện.");
+        } else {
+            // Hành động khi người dùng nhấn "Cancel"
+            alert("Yêu cầu đã bị hủy.");
+        }
+    }
+    function confirmDeleteAction() {
+        let confirmAction = confirm("Bạn có chắc chắn muốn xoá sản phẩm này không?");
+        if (confirmAction) {
+            // Thực hiện hành động khi người dùng nhấn "OK"
+            alert("Yêu cầu đã được thực hiện.");
+        } else {
+            // Hành động khi người dùng nhấn "Cancel"
+            alert("Yêu cầu đã bị hủy.");
+        }
+    }
+    function toggleProductDetails(button) {
+        const allPopups = document.querySelectorAll('.product-details-popup, .edit-product-popup');
+        allPopups.forEach(popup => {
+            if (popup !== button.nextElementSibling) {
+                popup.classList.remove('active');
+            }
+        });
+        const detailsPopup = button.nextElementSibling;
+        detailsPopup.classList.toggle('active');
+    }
+
+    function closeProductDetails(button) {
+        const popup = button.closest('.product-details-popup');
+        popup.classList.remove('active');
+    }
+
+    function toggleEditPopup(button) {
+        const detailsPopup = button.closest('.product-details-popup');
+        detailsPopup.classList.remove('active');
+        const editPopup = button.closest('.handle-product').querySelector('.edit-product-popup');
+        editPopup.classList.add('active');
+    }
+
+    function saveChanges(button) {
+        let confirmAction = confirm("Bạn có chắc chắn muốn lưu các thay đổi?");
+        if (confirmAction) {
+            alert("Đã lưu thay đổi thành công!");
+            const editPopup = button.closest('.edit-product-popup');
+            editPopup.classList.remove('active');
+        }
+    }
+
+    function cancelEdit(button) {
+        let confirmAction = confirm("Bạn có chắc chắn muốn hủy các thay đổi?");
+        if (confirmAction) {
+            const editPopup = button.closest('.edit-product-popup');
+            editPopup.classList.remove('active');
+        }
+    }
+
+    function confirmDeleteImage(button) {
+        let confirmAction = confirm("Bạn có chắc chắn muốn xóa ảnh này không?");
+        if (confirmAction) {
+            alert("Đã xóa ảnh thành công!");
+        } else {
+            alert("Đã hủy xóa ảnh!");
+        }
+    }
+
+    // Thêm event listener để đóng popup khi click ra ngoài
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('.handle-product')) {
+            const allPopups = document.querySelectorAll('.product-details-popup, .edit-product-popup');
+            allPopups.forEach(popup => {
+                popup.classList.remove('active');
+            });
+        }
+    });
+
+    // Ngăn chặn việc đóng popup khi click vào bên trong
+    document.querySelectorAll('.product-details-popup, .edit-product-popup').forEach(popup => {
+        popup.addEventListener('click', function(event) {
+            event.stopPropagation();
+        });
+    });
+    </script>
+    <script src="../icon/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
