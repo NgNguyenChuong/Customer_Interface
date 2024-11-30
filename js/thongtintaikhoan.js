@@ -101,79 +101,127 @@ function displayUserInfo(user) {
     }
 }
 
-function toggleEdit(field) {
-    const span = document.getElementById(field);
-    const input = document.getElementById(`${field}Input`) || document.getElementById(`${field}Select`);
-    const button = event.target;
-    
-    if (button.textContent === 'Sửa') {
-        // Chuyển sang chế độ chỉnh sửa
+function toggleEdit(fieldId) {
+    const span = document.getElementById(fieldId);
+    const input = fieldId === 'gender' ? 
+        document.getElementById('genderSelect') : 
+        document.getElementById(fieldId + 'Input');
+    const button = span.nextElementSibling.nextElementSibling;
+
+    if (input.style.display === 'none') {
         span.style.display = 'none';
         input.style.display = 'inline-block';
-        input.value = span.textContent !== 'Chưa cập nhật' ? span.textContent : '';
-        button.textContent = 'Lưu';
-        button.classList.add('save');
+        if (fieldId === 'gender') {
+            input.value = span.textContent;
+        } else {
+            input.value = span.textContent;
+        }
+        button.textContent = 'Xong';
     } else {
-        // Lưu thông tin
-        const newValue = input.value.trim();
-        
-        if (field === 'email') {
-            // Kiểm tra định dạng email
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(newValue)) {
-                alert('Email không hợp lệ!');
-                return;
-            }
-            
-            // Kiểm tra xem email đã tồn tại chưa
-            const users = JSON.parse(localStorage.getItem('users') || '[]');
-            const currentUser = JSON.parse(localStorage.getItem('currentUser'));
-            if (users.some(u => u.email === newValue && u.email !== currentUser.email)) {
-                alert('Email này đã được sử dụng!');
-                return;
-            }
-        }
-
-        if (newValue) {
-            // Cập nhật giao diện
-            span.textContent = newValue;
-            
-            // Cập nhật localStorage
-            const currentUser = JSON.parse(localStorage.getItem('currentUser'));
-            const users = JSON.parse(localStorage.getItem('users'));
-            
-            // Lưu email cũ để tìm user cần cập nhật
-            const oldEmail = currentUser.email;
-            
-            // Cập nhật thông tin người dùng hiện tại
-            currentUser[field] = newValue;
-            localStorage.setItem('currentUser', JSON.stringify(currentUser));
-            
-            // Cập nhật trong danh sách users
-            const userIndex = users.findIndex(u => u.email === oldEmail);
-            if (userIndex !== -1) {
-                users[userIndex][field] = newValue;
-                localStorage.setItem('users', JSON.stringify(users));
-            }
-            
-            // Cập nhật nút đăng nhập nếu thay đổi tên
-            if (field === 'fullName') {
-                updateLoginButton(currentUser);
-                // Cập nhật tên trong sidebar
-                const userGreeting = document.querySelector('.user-info p');
-                if (userGreeting) {
-                    userGreeting.textContent = `Hi, ${newValue}`;
-                }
-            }
-            
-            alert('Cập nhật thành công!');
-        }
-        
-        // Chuyển về chế độ hiển thị
+        const oldValue = span.textContent;
         span.style.display = 'inline-block';
         input.style.display = 'none';
+        span.textContent = input.value;
         button.textContent = 'Sửa';
-        button.classList.remove('save');
+
+        // Kiểm tra nếu giá trị đã thay đổi thì hiện thông báo
+        if (oldValue !== input.value) {
+            showNotification(`Đã cập nhật ${getFieldLabel(fieldId)}`);
+        }
+    }
+}
+
+// Hàm hiển thị thông báo
+function showNotification(message) {
+    // Tạo element thông báo
+    const notification = document.createElement('div');
+    notification.className = 'notification';
+    notification.textContent = message;
+    
+    // Thêm style cho notification
+    notification.style.position = 'fixed';
+    notification.style.top = '20px';
+    notification.style.right = '20px';
+    notification.style.backgroundColor = '#35635A';
+    notification.style.color = 'white';
+    notification.style.padding = '15px 25px';
+    notification.style.borderRadius = '5px';
+    notification.style.zIndex = '1000';
+    notification.style.animation = 'slideIn 0.5s ease-out';
+
+    // Thêm vào body
+    document.body.appendChild(notification);
+
+    // Tự động ẩn sau 3 giây
+    setTimeout(() => {
+        notification.style.animation = 'slideOut 0.5s ease-out';
+        setTimeout(() => {
+            document.body.removeChild(notification);
+        }, 500);
+    }, 3000);
+}
+
+// Hàm lấy tên trường hiển thị
+function getFieldLabel(fieldId) {
+    const labels = {
+        'fullName': 'họ tên',
+        'email': 'email',
+        'gender': 'giới tính',
+        'phone': 'số điện thoại',
+        'address': 'địa chỉ'
+    };
+    return labels[fieldId] || fieldId;
+}
+
+// Thêm CSS animation
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes slideIn {
+        from {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    
+    @keyframes slideOut {
+        from {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        to {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+    }
+`;
+document.head.appendChild(style);
+
+function saveChanges() {
+    const userData = {
+        fullName: document.getElementById('fullName').textContent,
+        email: document.getElementById('email').textContent,
+        gender: document.getElementById('gender').textContent,
+        phone: document.getElementById('phone').textContent,
+        address: document.getElementById('address').textContent
+    };
+
+    localStorage.setItem('userData', JSON.stringify(userData));
+    showNotification('Đã lưu tất cả thông tin thành công!');
+}
+
+window.onload = function() {
+    const savedData = localStorage.getItem('userData');
+    if (savedData) {
+        const userData = JSON.parse(savedData);
+        document.getElementById('fullName').textContent = userData.fullName;
+        document.getElementById('email').textContent = userData.email;
+        document.getElementById('gender').textContent = userData.gender;
+        document.getElementById('phone').textContent = userData.phone;
+        document.getElementById('address').textContent = userData.address;
     }
 }
 

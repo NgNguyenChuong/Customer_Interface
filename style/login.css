@@ -550,6 +550,7 @@ a.btn-goback:hover {
 .form-signup, .form-signin {
     position: relative;
     background: transparent;
+    z-index: 10;
 }
 
 .success {

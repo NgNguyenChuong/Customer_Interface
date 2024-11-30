@@ -17,26 +17,6 @@ function signIn() {
     return false;
   }
 
-  if (username.length < 3) {
-    alert("Tên đăng nhập phải có ít nhất 3 ký tự!");
-    return false;
-  }
-
-  if (!/^[a-zA-Z0-9_]+$/.test(username)) {
-    alert("Tên đăng nhập chỉ được chứa chữ cái, số và dấu gạch dưới!");
-    return false;
-  }
-
-  if (password.length < 6) {
-    alert("Mật khẩu phải có ít nhất 6 ký tự!");
-    return false;
-  }
-
-  if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)/.test(password)) {
-    alert("Mật khẩu phải chứa ít nhất một chữ hoa, một chữ thường và một số!");
-    return false;
-  }
-
   var user = {
     username: username,
     password: password,
@@ -104,7 +84,7 @@ function signIn() {
   document.head.appendChild(style);
 
   setTimeout(() => {
-    window.location.href = 'homePage.html';
+    window.location.href = '../index.html';
   }, 2000);
 
   return true;
@@ -120,9 +100,6 @@ document.addEventListener("DOMContentLoaded", function () {
         if (loginElement) {
             loginElement.style.display = "none";
         }
-        
-
-        document.getElementById('login-now').innerHTML = `Xin chào, ${localStorage.getItem("currentUser")}`;
     } else {
         // Nếu chưa đăng nhập, hiển thị nút đăng nhập và ẩn tên người dùng
         var loginElement = document.getElementById('login');
@@ -201,8 +178,8 @@ function confirmSignOut() {
         // Xóa thông tin đăng nhập
         localStorage.removeItem("isLogin");
         localStorage.removeItem("currentUser");
-        // Chuyển hướng về trang login
-        window.location.href = './index/login.html';
+        // Chuyển hướng về trang chủ
+        window.location.href = '../index.html';
         return false;
     }
     return false;
@@ -228,7 +205,7 @@ document.addEventListener('DOMContentLoaded', function() {
         signupLink.classList.add('signup-active');
     });
 
-    // Xử l�� click vào nút đăng nhập
+    // Xử l click vào nút đăng nhập
     signinLink.addEventListener('click', function(e) {
         e.preventDefault();
         signinForm.classList.remove('form-signin-left');

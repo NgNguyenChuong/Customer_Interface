@@ -34,7 +34,7 @@
                         <i class="fa-regular fa-user" id="offcanvasRightLabel"></i>
                         <h5 style="margin-top: 10px; margin-left: 10px;"> Người dùng 1 
                          </h5>
-                         <button href="#" style="border-style: solid; background-color: rgb(103, 103, 199); font-size: 16px; color:white; border-radius: 20px; height: 40px; width: 135px;margin-left: 6px; margin-top: 10px;"><b>Chưa đăng nhập</b></button>
+                         <button href="#" style="border-style: solid; background-color: rgb(103, 103, 199); font-size: 16px; color:white; border-radius: 20px; height: 40px; width: 140px;margin-left: 6px; margin-top: 10px;"><b>Chưa đăng nhập</b></button>
                        
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
@@ -43,11 +43,11 @@
                             <a href="#" class="menu-item">CỬA HÀNG</a>
                             </div>
                         <div class="discount">
-                            <a href="./Khuyenmai.html" class="dropdown-toggle">KHUYẾN MÃI </a>
+                            <a href="./khuyenmai.html" class="dropdown-toggle">KHUYẾN MÃI </a>
                         </div>
 
                         <div class="dropdown-1">
-                            <a href="./Sanpham.html" class="dropdown-toggle">
+                            <a href="./sanpham.html" class="dropdown-toggle">
                                 SẢN PHẨM
                                 <i class="fa-solid fa-chevron-right"></i>
                             </a>
@@ -72,14 +72,14 @@
                                     <div class="dropdown-menu4">
                                         <a href="./Travacaphe.html">Trà và Cà phê</a>
                                         <a href="./Sua.html">Sữa</a>
-                                        <a href="./NuocEpSinhTo.html">Nước ép & Sinh tố</a>
+                                        <a href="./Nuocep_sinhto.html">Nước ép & Sinh tố</a>
                                         <a href="./Thucuongkhac.html">Thức uống khác</a>
                                     </div>
                                 </div>
                                 <div class="dropdown-menu5">
                                     <a href="#">Sản phẩm chế biến <i class="fa-solid fa-chevron-right"></i></a>
                                     <div class="dropdown-menu6">
-                                        <a href="./BunMiSoi.html">Bún, Mỳ sợi các loại </a>
+                                                <a href="./BunMiSoi.html">Bún, Mỳ sợi các loại </a> 
                                         <a href="./Thuc_an_nhe.html">Thức ăn nhẹ</a>
                                         <a href="./Thucphamdonglanh.html">Thực phẩm đông lạnh</a>
                                     </div>
@@ -94,9 +94,9 @@
             </div>
 
             <div class="left-section">
-                <a href="./Khuyenmai.html" class="dropdown-toggle">KHUYẾN MÃI </a>
+                <a href="./khuyenmai.html" class="dropdown-toggle">KHUYẾN MÃI </a>
                 <div class="dropdown">
-                    <a href="./Sanpham.html" class="dropdown-toggle">
+                    <a href="./sanpham.html" class="dropdown-toggle">
                         SẢN PHẨM
                         <i class="fa-solid fa-chevron-right"></i>
                     </a>
@@ -108,7 +108,7 @@
                         <div class="dropdown-menu1">
                             <a href="#">Thịt & Thủy hải sản <i class="fa-solid fa-chevron-right"></i></a>
                             <div class="dropdown-menu2">
-                                <a href="./Thitheo.html">Thịt heo</a>
+                                <a href="./Thitheo.html">Thịt heo</a>   
                                 <a href="./Thitbo.html">Thịt bò</a>
                                 <a href="./Giacam_trung.html">Gia cầm & Trứng</a>
                                 <a href="./Thuyhaisan.html">Thủy hải sản</a>
@@ -137,7 +137,7 @@
                 <a href="#" class="menu-item">CỬA HÀNG</a>
             </div>
             <div class="middle-section">
-                <a href="../index.html"><img class="logo" src="../img/logoorganic.webp"></a>
+                <a href="../index.html"><img class="logo" src="../img/logoorganic.webp" title="logo"></a>
             </div>
             <div class="right-section">
                 <button class="history">
@@ -155,18 +155,45 @@
                             <i class="fa-solid fa-cart-shopping" style="color: white;"></i>
                         </button>
                     </a>
-                    <div class="user-dropdown">
-                        <button class="btn dropdown-toggle user-icon" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div id="login" class="user-dropdown">
+                        <button style="margin-left: 0px; border: none; background-color: white;" class="btn dropdown-toggle user-icon" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fas fa-user-circle" style="font-size: 46px;"></i>
                         </button>
                         
                         <ul class="dropdown-menu dropdown-menu-end custom-dropdown">
-                            <li><a class="dropdown-item custom-item" href="#"><i class="fas fa-sign-in-alt"></i> Đăng nhập</a></li>
-                            <li><a class="dropdown-item custom-item" href="#"><i class="fas fa-user-plus"></i> Đăng ký</a></li>
+                            <li><a class="dropdown-item custom-item" href="./login.html"><i class="fas fa-sign-in-alt"></i> Đăng nhập</a></li>
+                            <li><a class="dropdown-item custom-item" href="./login.html?form=signup"><i class="fas fa-user-plus"></i> Đăng ký</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item custom-item" href="./Lich_su.html"><i class="fas fa-history"></i> Lịch sử đơn hàng</a></li>
+                            <li><a href="#" class="btn-signout" 
+                                style="color: black; text-decoration: none; padding: 5px 10px; transition: all 0.3s ease; border-radius: 5px;" 
+                                onmouseover="this.style.backgroundColor='#ff4444'" 
+                                onmouseout="this.style.backgroundColor='transparent'"
+                                onclick="return confirmSignOut()">
+                                <i class="fa-solid fa-right-to-bracket" style="margin-right: 5px;"></i>
+                                Đăng xuất
+                            </a></li>
                         </ul>
                     </div>
+                    <div id="login-2" class="user-dropdown">
+                        <button style="margin-left: 0px; border: none; background-color: white;" class="btn dropdown-toggle user-icon" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                           <img src="../img/chillguy.jpg" alt="user" style="width: 46px; height: 46px; border-radius: 50%;">
+                        </button>
+                        
+                        <ul class="dropdown-menu dropdown-menu-end custom-dropdown">
+                       
+                            <li><a class="dropdown-item custom-item" href="./thongtintaikhoan.html">Thông tin tài khoản</a></li>
+                            <li><a href="#" class="btn-signout" 
+                                style="color:black; text-decoration: none; padding: 5px 10px; transition: all 0.3s ease; border-radius: 5px;" 
+                                onmouseover="this.style.backgroundColor='#ff4444'" 
+                                onmouseout="this.style.backgroundColor='transparent'"
+                                onclick="return confirmSignOut()">
+                                <i class="fa-solid fa-right-to-bracket" style="margin-right: 5px;"></i>
+                                Đăng xuất
+                            </a></li>
+                        </ul>
+                    </div>
+                    <p id="login-now" style="margin-bottom: 0px;" class="login-now"></p>
+                </div>
                 </div>
             </div>
         </div>
@@ -289,5 +316,6 @@
         }
         </script>
          <script src="../icon/js/bootstrap.bundle.min.js"></script>
+         <script src="../js/main.js"></script>
 </body>
 </html>
