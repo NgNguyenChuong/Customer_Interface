@@ -728,9 +728,7 @@ body {
         margin-right: auto;
     }
 
-    .logo {
-        height: 240px !important;
-    }
+
 
     .right-section {
         gap: 15px;
@@ -921,6 +919,7 @@ body {
     border: none;
     display: flex;
     align-items: center;
+    margin-left: 3px;
 }
 
 .user-dropdown .btn:hover,
@@ -1000,7 +999,7 @@ body {
     margin-right: 15px;
 }
 
-/* Cập nhật media queries */
+Cập nhật media queries
 @media screen and (min-width: 1023px) {
     /* Styles cho PC */
     .container-header {
@@ -1014,18 +1013,6 @@ body {
     }
     /* ... các styles khác cho PC ... */
 }
-
-@media screen and (min-width: 740px) and (max-width: 1023px) {
-    /* Styles cho tablet */
-    .container-header {
-        height: 80px;
-    }
-    .fa-user-circle {
-        font-size: 35px;
-        margin-right: 0;
-    }
-}
-
 /* Desktop (>=1024px) */
 @media screen and (min-width: 1024px) {
     .container-header {
@@ -1095,10 +1082,6 @@ body {
         border: none;
     }
 
-    .fa-user-circle {
-        font-size: 45px;
-        margin-right: 0;
-    }
 
     .custom-dropdown {
         position: absolute;
@@ -1133,7 +1116,7 @@ body {
 }
 
 /* Tablet (>=768px và <1024px) */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
     .container-header {
         height: 80px;
     }
@@ -1185,11 +1168,12 @@ body {
     .user-dropdown {
         margin-left: 0;
     }
-
-    .fa-user-circle {
+    .dropdown-toggle i {
+        margin-left: 5px;
         font-size: 35px;
-        margin-right: 0;
+       
     }
+
 }
 
 /* Mobile (<768px) */
@@ -1209,12 +1193,8 @@ body {
         font-size: 24px;
     }
 
-    .middle-section {
-        flex: 0;
-    }
-
     .logo {
-        height: 50px;
+        height: 70px;
     }
 
     .right-section {
@@ -1241,15 +1221,10 @@ body {
         display: block;
         font-size: 20px;
     }
-
-    .user-dropdown {
-        margin-left: -10px;
+    .dropdown-toggle i {
+        font-size: 33px;
     }
 
-    .fa-user-circle {
-        font-size: 30px;
-        margin-right: 0;
-    }
 }
 
 .cart-link {
@@ -1365,24 +1340,6 @@ body {
     }
 }
 
-/* Responsive cho logo và middle section */
-@media screen and (max-width: 1024px) {
-    .middle-section {
-        height: 70px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .middle-section {
-        height: 60px;
-    }
-}
-
-@media screen and (max-width: 375px) {
-    .middle-section {
-        height: 50px;
-    }
-}
 
 /* Thêm responsive cho button */
 @media screen and (max-width: 768px) {
