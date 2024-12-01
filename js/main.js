@@ -237,7 +237,7 @@ function addToCart(productName, price) {
   
   if (!isLogin) {
       if (confirm("Bạn cần đăng nhập để mua hàng! Bạn có muốn đăng nhập ngay?")) {
-          window.location.href = '../../index/login.html';
+          window.location.href = '../index/login.html';
       }
       return;
   }
