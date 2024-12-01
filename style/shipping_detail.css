@@ -233,8 +233,8 @@
     object-fit: cover;
     border-radius: 4px;
     margin-right: 8px;
-    max-width: 222px;
-    max-height: 186px;
+    max-width: 175px;
+    max-height: 175px;
 }
 
 .product-details {
@@ -415,3 +415,14 @@
 }
 
 
+@media screen and (max-width: 768px) {
+    .product-item {
+        display:flex;
+        flex-direction: column;
+    }
+    .product-details {
+        display:flex;
+        flex-direction: column;
+    }
+
+}
