@@ -1332,3 +1332,71 @@ Reset CSS
         width: 90%;
     }
 }
+/* Style cho product dropdown */
+.product-dropdown {
+    position: relative;
+}
+
+/* Menu chính hiện thẳng ra */
+.product-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    z-index: 1000;
+    display: none;
+    transition: all 0.3s ease;
+}
+
+/* Hiển thị menu khi hover vào cả vùng chứa sản phẩm */
+.product-dropdown:hover .product-menu,
+.product-menu:hover {
+    display: block;
+}
+
+/* Menu con hiện sang bên phải */
+.product-submenu1, .product-submenu3, .product-submenu5 {
+    position: relative;
+}
+
+.product-submenu2, .product-submenu4, .product-submenu6 {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    display: none;
+}
+
+/* Hiển thị menu con ngay khi hover */
+.product-submenu1:hover .product-submenu2,
+.product-submenu3:hover .product-submenu4,
+.product-submenu5:hover .product-submenu6 {
+    display: block;
+}
+
+/* Style cho các mục trong menu */
+.product-menu a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: black;
+    white-space: nowrap;
+}
+
+/* Hiệu ứng hover cho các mục */
+.product-menu a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Đảm bảo menu không bị ẩn khi di chuyển chuột */
+.product-menu,
+.product-submenu2,
+.product-submenu4,
+.product-submenu6 {
+    margin: 0;
+    padding: 5px 0;
+}
