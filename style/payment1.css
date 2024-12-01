@@ -246,3 +246,159 @@ h3 {
 .modal-content button:hover {
     background: #45a049;
 }
+
+/* Thêm style cho shipping method */
+.shipping-method {
+    margin-bottom: 30px;
+}
+
+.shipping-options {
+    margin-top: 15px;
+}
+
+.shipping-option {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+.shipping-option:hover {
+    border-color: #4CAF50;
+}
+
+.shipping-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+}
+
+.shipping-name {
+    font-weight: 500;
+    color: #333;
+}
+
+.shipping-price {
+    color: #4CAF50;
+    font-weight: 500;
+}
+
+.shipping-time {
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* Style cho radio button của shipping */
+.shipping-option input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    margin-right: 15px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.shipping-option input[type="radio"]:checked {
+    border-color: #4CAF50;
+    background: #4CAF50;
+    position: relative;
+}
+
+.shipping-option input[type="radio"]:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+}
+
+/* Responsive cho shipping options */
+@media screen and (max-width: 768px) {
+    .shipping-option {
+        padding: 12px;
+    }
+
+    .shipping-name {
+        font-size: 14px;
+    }
+
+    .shipping-price, .shipping-time {
+        font-size: 13px;
+    }
+
+    .shipping-option input[type="radio"] {
+        width: 18px;
+        height: 18px;
+        margin-right: 10px;
+    }
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 400px;
+    animation: modalFadeIn 0.3s;
+}
+
+.success-icon {
+    width: 60px;
+    height: 60px;
+    background: #4CAF50;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.success-icon i {
+    color: white;
+    font-size: 30px;
+}
+
+.modal-content h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.modal-content p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

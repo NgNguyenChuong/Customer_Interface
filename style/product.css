@@ -620,6 +620,7 @@ body {
 
     .product-description {
         flex-direction: column;
+        font-size: 12px;
     }
 
     .description-title {
