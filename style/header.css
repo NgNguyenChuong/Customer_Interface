@@ -1335,8 +1335,16 @@ Reset CSS
 /* Style cho product dropdown */
 .product-dropdown {
     position: relative;
+    font-size: 16px;
+    
 }
-
+.product-dropdown a {
+    color: black;
+    font-weight:500 ;
+}
+.product-dropdown a:hover {
+  color: #6AA173;
+}
 /* Menu chính hiện thẳng ra */
 .product-menu {
     position: absolute;
