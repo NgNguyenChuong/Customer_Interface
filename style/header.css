@@ -820,6 +820,14 @@ Reset CSS
         height: 60px;
         padding: 0 10px;
     }
+    .product-submenu2, .product-submenu4, .product-submenu6 {
+        font-size: 13px;
+    }
+    .product-submenu1, .product-submenu3, .product-submenu5, .product-menu,.product-menu2 {
+        min-width: 30px;
+        font-size: 13px;
+    }
+
 
     .header {
         display: flex;
@@ -1352,7 +1360,7 @@ Reset CSS
     top: 100%;
     left: 0;
     background-color: white;
-    min-width: 200px;
+    min-width: 100px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     z-index: 1000;
     display: none;
@@ -1368,6 +1376,7 @@ Reset CSS
 /* Menu con hiện sang bên phải */
 .product-submenu1, .product-submenu3, .product-submenu5 {
     position: relative;
+    
 }
 
 .product-submenu2, .product-submenu4, .product-submenu6 {
@@ -1375,7 +1384,7 @@ Reset CSS
     left: 100%;
     top: 0;
     background-color: white;
-    min-width: 200px;
+    min-width: 50px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     display: none;
 }
