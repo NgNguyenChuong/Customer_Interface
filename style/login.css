@@ -628,3 +628,50 @@ a.btn-signout i {
 a.btn-signout:hover i {
     color: #ff4444;
 }
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .frame {
+    width: 90%;
+    max-width: 430px;
+    height: 500px;
+  }
+
+  .form-signin, .form-signup {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 20px;
+  }
+  .frame {
+    height: 675px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .frame {
+    width: 95%;
+    height: auto;
+    min-height: 575px;
+    height: 500px;
+  }
+
+  .frame {
+    height: 675px;
+  }
+
+}
+
+@media screen and (max-width: 320px) {
+  .frame {
+    width: 100%;
+    border-radius: 0;
+    margin-top: 50px;
+    height: 550px;
+  }
+  .form-signin, .form-signup {
+    font-size: 12px;
+  }
+  .form-styling {
+    height: 30px !important;
+  }
+}
