@@ -402,3 +402,30 @@ h3 {
         transform: translateY(0);
     }
 }
+
+#bankDetails {
+    background-color: #f9f9f9;
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#bankDetails input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#bankDetails input:last-child {
+    margin-bottom: 0;
+}
+
+#bankDetails p {
+    margin-bottom: 10px;
+    color: #666;
+    font-size: 14px;
+}

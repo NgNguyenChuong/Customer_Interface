@@ -128,6 +128,23 @@
             window.location.href = '../index.html';
         }, 2000);
     }
+
+    // Thêm code mới để xử lý hiển thị form chuyển khoản
+    document.addEventListener('DOMContentLoaded', function() {
+        const bankTransferRadio = document.getElementById('bankTransfer');
+        const bankDetails = document.getElementById('bankDetails');
+
+        // Lắng nghe sự kiện khi radio button thay đổi
+        document.querySelectorAll('input[name="payment"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                if (this.id === 'bankTransfer') {
+                    bankDetails.style.display = 'block';
+                } else {
+                    bankDetails.style.display = 'none';
+                }
+            });
+        });
+    });
     </script>
 
   
