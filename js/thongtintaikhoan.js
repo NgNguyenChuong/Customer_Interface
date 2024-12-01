@@ -1,12 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Kiểm tra đăng nhập
-    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
-    
-    if (!currentUser) {
-        window.location.href = 'signIn.html';
-        return;
-    }
-    
     // Hiển thị thông tin người dùng trong trang thông tin tài khoản
     displayUserInfo(currentUser);
     
