@@ -238,29 +238,6 @@
         // Lấy giỏ hàng từ localStorage hoặc khởi tạo mới nếu chưa có
         let cart = JSON.parse(localStorage.getItem('cartItems')) || [];
     
-        function confirmAddProduct() {
-            const product = {
-                name: "Bắp ngọt hữu cơ",
-                price: 40000,
-                quantity: 1,
-                image: document.querySelector('.main-image').src
-            };
-    
-            // Kiểm tra xem sản phẩm đã có trong giỏ hàng chưa
-            const existingProductIndex = cart.findIndex(item => item.name === product.name);
-            if (existingProductIndex !== -1) {
-                // Nếu có, tăng số lượng sản phẩm
-                cart[existingProductIndex].quantity += 1;
-            } else {
-                // Nếu chưa, thêm sản phẩm mới vào giỏ hàng
-                cart.push(product);
-            }
-    
-            // Lưu giỏ hàng vào localStorage
-            localStorage.setItem('cartItems', JSON.stringify(cart));
-            alert("Đã thêm sản phẩm vào giỏ hàng");
-        }
-    
         function openCart() {
             let cartContent = "Giỏ hàng:\n";
             cart.forEach(item => {
