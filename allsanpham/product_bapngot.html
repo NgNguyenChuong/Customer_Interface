@@ -216,7 +216,6 @@
                     <input type="number" value="1" min="1" class="quantity-input">
                     <button class="quantity-btn plus">+</button>
                 </div>
-                
                 <div class="actions">
                     <button class="add-to-cart" onclick="confirmAddProduct()">THÊM VÀO GIỎ</button>
                     <button class="buy-now" onclick="confirmBuyProduct()">MUA NGAY</button>
@@ -232,7 +231,8 @@
                 <p><strong>Gợi ý sử dụng:</strong> Bắp có thể dùng nấu sữa, hấp, luộc, hoặc xào cùng tôm, hay làm nguyên liệu cho các món bánh mặn ngọt.</p>
                 <p><strong>Hướng dẫn bảo quản:</strong> Bảo quản trong ngăn mát tủ lạnh.</p>
                 <p><strong>Hạn sử dụng:</strong> 3 - 6 ngày tùy điều kiện bảo quản.</p>
-        </div>        
+            </div> <!-- Thêm thẻ đóng này -->
+        </div>
     </div>
     <div class="header-section">
         <div class="header-content">
@@ -242,11 +242,10 @@
         </div>
         <div class="certification-logos">
             <img src="../img/usda.webp" alt="USDA Organic Certification">
-            <div class="certification-logos2">
-                <img src="../img/la.webp" alt="EU Organic Certification">
-            </div>
-        </div>  
-    </div>
+            <img src="../img/la.webp" alt="EU Organic Certification">
+        </div> <!-- Gộp các logo trong một thẻ -->
+    </div>  
+    
     <script src="../icon/js/bootstrap.bundle.min.js"></script>
     <script>
         // Lấy giỏ hàng từ localStorage hoặc khởi tạo mới nếu chưa có
