@@ -113,11 +113,11 @@ body {
 /* Account Info - Right Column */
 .account-info {
     flex: 1;
+    min-width: 450px;
     background: white;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    min-width: 800px;
 }
 
 .account-info h2 {
@@ -181,8 +181,11 @@ body {
     
     .user-info,
     .account-info {
-        width: 100%;
-        min-width: unset;
+        width: 80%;
+        /* min-width: unset; */
+        font-size: 12px;
+
+        
     }
 }
 
@@ -222,6 +225,7 @@ body {
 .edit-field select {
     flex: 1;
     max-width: 400px;
+    width: 50px;
     padding: 8px 12px;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -229,7 +233,7 @@ body {
 }
 
 .edit-btn {
-    padding: 8px 20px;
+    padding: 4px 10px;
     background-color: #35635A;
     color: white;
     border: none;

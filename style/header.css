@@ -112,6 +112,7 @@ Reset CSS
     margin: 0 auto;
     padding: 20px;
     margin-top: 10px; /* Điều chỉnh khoảng cách dưới header */
+    min-height: 850px;
 }
 .container img{
     width: 1040px;
